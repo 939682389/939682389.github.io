@@ -62,6 +62,42 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-图像透视" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/04/图像透视/" class="article-date">
+  <time datetime="2018-08-04T09:57:33.000Z" itemprop="datePublished">2018-08-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/04/图像透视/">图像透视</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="图像透视代码"><a href="#图像透视代码" class="headerlink" title="图像透视代码"></a>图像透视代码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">IplImage *Creat_WarpPerspective(IplImage *src)</span><br><span class="line">&#123;</span><br><span class="line">	CvPoint2D32f srcTri[4], dstTri[4]; //二维坐标下的点，类型为浮点</span><br><span class="line">									   //CvMat* rot_mat = cvCreateMat( 2, 3, CV_32FC1 );  //多通道矩阵</span><br><span class="line">	CvMat* warp_mat = cvCreateMat(3, 3, CV_32FC1);</span><br><span class="line">	IplImage *dst;</span><br><span class="line">	dst = cvCloneImage(src);  //制作图像的完整拷贝</span><br><span class="line">	dst-&gt;origin = src-&gt;origin;</span><br><span class="line">	/*</span><br><span class="line">	int origin; /* 0 - 顶—左结构,</span><br><span class="line">	1 - 底—左结构 (Windows bitmaps 风格)</span><br><span class="line">	*/</span><br><span class="line">	cvZero(dst);  //清空数组</span><br><span class="line"></span><br><span class="line">				  //计算矩阵仿射变换</span><br><span class="line">	srcTri[0].x = 0;</span><br><span class="line">	srcTri[0].y = 0;</span><br><span class="line">	srcTri[1].x = src-&gt;width - 1;  //缩小一个像素</span><br><span class="line">	srcTri[1].y = 0;</span><br><span class="line">	srcTri[2].x = 0;</span><br><span class="line">	srcTri[2].y = src-&gt;height - 1;</span><br><span class="line">	srcTri[3].x = src-&gt;width - 1;  //bot right</span><br><span class="line">	srcTri[3].y = src-&gt;height - 1;</span><br><span class="line"></span><br><span class="line">	//改变目标图像大小</span><br><span class="line">	<span class="built_in">float</span> t;</span><br><span class="line">	srand(time(0));</span><br><span class="line">	t = -(0.1*random(T) + random(N));</span><br><span class="line">	//<span class="built_in">printf</span>(<span class="string">"%f\n"</span>, t);</span><br><span class="line">	dstTri[0].x = src-&gt;width * t;</span><br><span class="line">	t = -(0.1*random(T) + random(N));</span><br><span class="line">	dstTri[0].y = src-&gt;height * t;</span><br><span class="line">	t = (0.1*random(T) + random(N) + 1);</span><br><span class="line">	dstTri[1].x = src-&gt;width * t;</span><br><span class="line">	t = -(0.1*random(T) + random(N));</span><br><span class="line">	dstTri[1].y = src-&gt;height * t;</span><br><span class="line">	t = -(0.1*random(T) + random(N));</span><br><span class="line">	dstTri[2].x = src-&gt;width * t;</span><br><span class="line">	t = (0.1*random(T) + random(N) + 1);</span><br><span class="line">	dstTri[2].y = src-&gt;height * t;</span><br><span class="line">	t = (0.1*random(T) + random(N) + 1);</span><br><span class="line">	dstTri[3].x = src-&gt;width * t;</span><br><span class="line">	t = (0.1*random(T) + random(N) + 1);</span><br><span class="line">	dstTri[3].y = src-&gt;height * t;</span><br><span class="line"></span><br><span class="line">	cvGetPerspectiveTransform(srcTri, dstTri, warp_mat);  //由三对点计算仿射变换 </span><br><span class="line">	cvWarpPerspective(src, dst, warp_mat);  //对图像做仿射变换</span><br><span class="line"> 										//输出</span><br><span class="line">	cvNamedWindow(<span class="string">"Perspective Warp"</span>, 1);</span><br><span class="line">	cvShowImage(<span class="string">"Perspective Warp"</span>, dst);  //最终是输出dst </span><br><span class="line">	cvReleaseImage(&amp;src);</span><br><span class="line">	cvReleaseMat(&amp;warp_mat);</span><br><span class="line">	<span class="built_in">return</span> dst;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/04/图像透视/" data-id="cjkf8wbr0000490wbgpewvo5x" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-论文下载" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/08/03/论文下载/" class="article-date">
@@ -89,7 +125,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/03/论文下载/" data-id="cjkdkkaj50007xgwbdtyulwbp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/08/03/论文下载/" data-id="cjkf8wbrk000890wbwlyia1c7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -126,7 +162,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/03/网络爬虫下纹理图片/" data-id="cjkdkkaj20005xgwbgh0jqhqt" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/08/03/网络爬虫下纹理图片/" data-id="cjkf8wbr5000790wboh1xgcm7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -165,7 +201,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/21/python邮件收发/" data-id="cjkdkkaio0000xgwbwsdhvltd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/21/python邮件收发/" data-id="cjkf8wbqo000090wbebzny2ds" class="article-share-link">Share</a>
       
       
     </footer>
@@ -203,7 +239,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/21/qss/" data-id="cjkdkkaiu0001xgwb7du4iuqb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/21/qss/" data-id="cjkf8wbqu000190wby8walthj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -243,7 +279,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/21/深度学习第一步/" data-id="cjkdkkaj40006xgwblfqpnjzn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/21/深度学习第一步/" data-id="cjkf8wbr3000690wbtweh71ot" class="article-share-link">Share</a>
       
       
     </footer>
@@ -288,7 +324,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/16/深度学习笔记/" data-id="cjkdkkaj10004xgwb3azo9rgi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/16/深度学习笔记/" data-id="cjkf8wbr2000590wb5avmb0xf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -324,7 +360,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/15/世界杯决赛/" data-id="cjkdkkaix0002xgwbmo9svl8h" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/15/世界杯决赛/" data-id="cjkf8wbqw000290wbjsrgpdju" class="article-share-link">Share</a>
       
       
     </footer>
@@ -363,7 +399,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/14/十六进制转字符串/" data-id="cjkdkkaiz0003xgwbofxnqhzq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/14/十六进制转字符串/" data-id="cjkf8wbqy000390wbwu2fu5qx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -404,6 +440,10 @@
       <ul>
         
           <li>
+            <a href="/2018/08/04/图像透视/">图像透视</a>
+          </li>
+        
+          <li>
             <a href="/2018/08/03/论文下载/">论文下载</a>
           </li>
         
@@ -417,10 +457,6 @@
         
           <li>
             <a href="/2018/07/21/qss/">QSS</a>
-          </li>
-        
-          <li>
-            <a href="/2018/07/21/深度学习第一步/">深度学习第一步</a>
           </li>
         
       </ul>
