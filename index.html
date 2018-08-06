@@ -62,6 +62,42 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-微信定时发送源码" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/06/微信定时发送源码/" class="article-date">
+  <time datetime="2018-08-06T10:51:36.000Z" itemprop="datePublished">2018-08-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/06/微信定时发送源码/">微信定时发送源码</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:gbk -*-</span></span><br><span class="line"><span class="comment"># 导入模块</span></span><br><span class="line">from wxpy import *</span><br><span class="line">import time</span><br><span class="line">import random</span><br><span class="line"></span><br><span class="line">bot = Bot()</span><br><span class="line"><span class="comment"># 初始化机器人，扫码登陆</span></span><br><span class="line"></span><br><span class="line">def send_news():</span><br><span class="line">  data=[]</span><br><span class="line">  data.append(<span class="string">'xxx'</span>)</span><br><span class="line"></span><br><span class="line">  n=0</span><br><span class="line">  <span class="keyword">while</span> 1:</span><br><span class="line">    try:</span><br><span class="line">        </span><br><span class="line">        my_friend = bot.friends().search(u<span class="string">'Zkk'</span>)[0]    <span class="comment">#你朋友的微信名称，不是备注，也不是微信帐号。</span></span><br><span class="line">        </span><br><span class="line">        my_friend.send(data[n])</span><br><span class="line">        n+=1</span><br><span class="line">        <span class="keyword">if</span> n==len(data):</span><br><span class="line">           <span class="built_in">return</span></span><br><span class="line">        time.sleep(480)</span><br><span class="line">    except:</span><br><span class="line">        my_friend = bot.friends().search(<span class="string">'Zkk'</span>)[0]<span class="comment">#你的微信名称，不是微信帐号。</span></span><br><span class="line">        my_friend.send(u<span class="string">"今天消息发送失败了"</span>)</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    send_news()</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/06/微信定时发送源码/" data-id="cjki5qkxp0004okwb2xhber0i" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-图像透视" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/08/04/图像透视/" class="article-date">
@@ -88,7 +124,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/04/图像透视/" data-id="cjkf8wbr0000490wbgpewvo5x" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/08/04/图像透视/" data-id="cjki5qkyy0009okwb7v65glzz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -125,7 +161,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/03/论文下载/" data-id="cjkf8wbrk000890wbwlyia1c7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/08/03/论文下载/" data-id="cjki5qkxv0008okwbhebczzid" class="article-share-link">Share</a>
       
       
     </footer>
@@ -162,7 +198,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/03/网络爬虫下纹理图片/" data-id="cjkf8wbr5000790wboh1xgcm7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/08/03/网络爬虫下纹理图片/" data-id="cjki5qkxt0007okwbn0b0df2c" class="article-share-link">Share</a>
       
       
     </footer>
@@ -201,7 +237,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/21/python邮件收发/" data-id="cjkf8wbqo000090wbebzny2ds" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/21/python邮件收发/" data-id="cjki5qkxd0000okwbsfk8hzz4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -239,7 +275,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/21/qss/" data-id="cjkf8wbqu000190wby8walthj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/21/qss/" data-id="cjki5qkxj0001okwb2927rg6o" class="article-share-link">Share</a>
       
       
     </footer>
@@ -279,7 +315,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/21/深度学习第一步/" data-id="cjkf8wbr3000690wbtweh71ot" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/21/深度学习第一步/" data-id="cjki5qkxs0006okwbgiun8s1l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -324,7 +360,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/16/深度学习笔记/" data-id="cjkf8wbr2000590wb5avmb0xf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/16/深度学习笔记/" data-id="cjki5qkxr0005okwbo5stl8pz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -360,7 +396,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/15/世界杯决赛/" data-id="cjkf8wbqw000290wbjsrgpdju" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/15/世界杯决赛/" data-id="cjki5qkxm0002okwb8to2v7r2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -399,7 +435,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/14/十六进制转字符串/" data-id="cjkf8wbqy000390wbwu2fu5qx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/14/十六进制转字符串/" data-id="cjki5qkxo0003okwborml315o" class="article-share-link">Share</a>
       
       
     </footer>
@@ -440,6 +476,10 @@
       <ul>
         
           <li>
+            <a href="/2018/08/06/微信定时发送源码/">微信定时发送源码</a>
+          </li>
+        
+          <li>
             <a href="/2018/08/04/图像透视/">图像透视</a>
           </li>
         
@@ -453,10 +493,6 @@
         
           <li>
             <a href="/2018/07/21/python邮件收发/">python邮件收发</a>
-          </li>
-        
-          <li>
-            <a href="/2018/07/21/qss/">QSS</a>
           </li>
         
       </ul>
