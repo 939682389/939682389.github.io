@@ -165,71 +165,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-python-统计高频词汇" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/18/python-统计高频词汇/">python 统计高频词汇</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/18/python-统计高频词汇/" class="archive-article-date">
-  	<time datetime="2018-08-18T01:15:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="python大法好"><a href="#python大法好" class="headerlink" title="python大法好"></a>python大法好</h1><p> get 一个操作word包：安装python-docx：pip install python_docx</p>
-<p> 废话不多说，直接上源码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import jieba<span class="comment">#jieba很有个性</span></span><br><span class="line">santi_text = open(<span class="string">'./santi.txt'</span>).<span class="built_in">read</span>()</span><br><span class="line">cut = jieba.cut(santi_text)</span><br><span class="line">get=<span class="string">','</span>.join(cut)<span class="comment">#get为str</span></span><br><span class="line">list=get.split(<span class="string">','</span>)</span><br><span class="line">word=[]</span><br><span class="line">num=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list:</span><br><span class="line"> <span class="keyword">if</span> i <span class="keyword">in</span> word:</span><br><span class="line">  num[word.index(i)]+=1</span><br><span class="line"> <span class="keyword">else</span>:</span><br><span class="line">  word.append(i)</span><br><span class="line">  num.append(1)</span><br><span class="line">fp=open(<span class="string">"reslut.xls"</span>,<span class="string">"w"</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> word:</span><br><span class="line"> fp.write(i+<span class="string">'\t'</span>+str(word.index(i)+<span class="string">'\n'</span>))</span><br><span class="line">fp.close()</span><br></pre></td></tr></table></figure></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/18/python-统计高频词汇/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
     <article id="post-数据库和抢红包的交互" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -698,7 +633,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="自己做了一个数据标注工具"><a href="#自己做了一个数据标注工具" class="headerlink" title="自己做了一个数据标注工具"></a>自己做了一个数据标注工具</h3><h2 id="上图"><a href="#上图" class="headerlink" title="上图"></a>上图</h2><p><img src="深度学习第一步/1.png" alt="1"></p>
+        <h3 id="自己做了一个数据标注工具"><a href="#自己做了一个数据标注工具" class="headerlink" title="自己做了一个数据标注工具"></a>自己做了一个数据标注工具</h3><h2 id="上图"><a href="#上图" class="headerlink" title="上图"></a>上图</h2><p><img src="/2018/07/21/深度学习第一步/1.png" alt="1"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">耗时三天</span><br></pre></td></tr></table></figure>
 <h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">QT5.8.0+VS2015+OPENCV2.4.9</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://www.chianzkk.cn" target="_blank" rel="noopener">Server</a></p>
@@ -766,13 +701,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="日期：2018-7-16"><a href="#日期：2018-7-16" class="headerlink" title="日期：2018/7/16"></a>日期：2018/7/16</h3><h2 id="卷积核："><a href="#卷积核：" class="headerlink" title="卷积核："></a>卷积核：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">一个听起来很高大上的词语，我们依然用之前的基础来解释：通俗易懂：就是粉红色矩阵的个数！！因为有时候我们要提取的特征非常多非常广泛，所以需要我们用更多的矩阵来扫（多扫几遍），那么粉红色矩阵的个数就是卷积核个数。</span><br></pre></td></tr></table></figure>
-<h2 id="VGG16："><a href="#VGG16：" class="headerlink" title="VGG16："></a>VGG16：</h2><p><img src="深度学习笔记/logo.jpg" alt="logo"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Conv3-512   →    第三层卷积后维度变成512；</span><br><span class="line">Conv3_2 s=2     →     第三层卷积层里面的第二子层，滑动步长等于2（每次移动两个格子）</span><br></pre></td></tr></table></figure></p>
-<h2 id="利用之前的基本概念来解释深层的VGG16卷及网络"><a href="#利用之前的基本概念来解释深层的VGG16卷及网络" class="headerlink" title="利用之前的基本概念来解释深层的VGG16卷及网络"></a>利用之前的基本概念来解释深层的VGG16卷及网络</h2><h3 id="【1、从INPUT到Conv1：】"><a href="#【1、从INPUT到Conv1：】" class="headerlink" title="【1、从INPUT到Conv1：】"></a>【1、从INPUT到Conv1：】</h3><p><img src="深度学习笔记/p1.jpg" alt="p1"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">首先两个黄色的是卷积层，是VGG16网络结构十六层当中的第一层（Conv1_1）和第二层（Conv1_2），他们合称为Conv1。</span><br><span class="line">我们主要讲述第一个，也就是第一层（Conv1_1），它怎么把一个300*300*3的矩阵变成一个300*300*64的矩阵？</span><br></pre></td></tr></table></figure></p>
-<p><img src="深度学习笔记/p2.PNG" alt="p2"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">我们假设蓝色框是一个RGB图像，橙色是一个3*3*3的卷积核，我们对一个三维的27个数求和，然后扫过去，按照第一部分算的得出来的是一维的298*298的矩阵（因为卷积核也是三维所以结果是一维）；</span><br><span class="line">然后回想一下什么是Padding、前面也讲过它的概念了；所以不了一圈的圆，回到了300*300*1；</span><br><span class="line">然后，VGG16这一层安置有64个卷积核，那么，原来的300*300*1变成300*300*64</span><br><span class="line">于是我们的到了想要的东西；最后的绿色框；</span><br></pre></td></tr></table></figure></p>
-<h3 id="【1、从Conv1到Conv2之间的过度：】"><a href="#【1、从Conv1到Conv2之间的过度：】" class="headerlink" title="【1、从Conv1到Conv2之间的过度：】"></a>【1、从Conv1到Conv2之间的过度：】</h3><p><img src="深度学习笔记/p3.png" alt="p3"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">这一步用的Pooling是：2*2*64 s=2；</span><br><span class="line">也就是说，步长是二，滑动的矩阵本身没有重叠；刚好减半，第三维度64不变；</span><br></pre></td></tr></table></figure></p>
+<h2 id="VGG16："><a href="#VGG16：" class="headerlink" title="VGG16："></a>VGG16：</h2><p><img src="/2018/07/16/深度学习笔记/logo.jpg" alt="logo"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Conv3-512   →    第三层卷积后维度变成512；</span><br><span class="line">Conv3_2 s=2     →     第三层卷积层里面的第二子层，滑动步长等于2（每次移动两个格子）</span><br></pre></td></tr></table></figure></p>
+<h2 id="利用之前的基本概念来解释深层的VGG16卷及网络"><a href="#利用之前的基本概念来解释深层的VGG16卷及网络" class="headerlink" title="利用之前的基本概念来解释深层的VGG16卷及网络"></a>利用之前的基本概念来解释深层的VGG16卷及网络</h2><h3 id="【1、从INPUT到Conv1：】"><a href="#【1、从INPUT到Conv1：】" class="headerlink" title="【1、从INPUT到Conv1：】"></a>【1、从INPUT到Conv1：】</h3><p><img src="/2018/07/16/深度学习笔记/p1.jpg" alt="p1"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">首先两个黄色的是卷积层，是VGG16网络结构十六层当中的第一层（Conv1_1）和第二层（Conv1_2），他们合称为Conv1。</span><br><span class="line">我们主要讲述第一个，也就是第一层（Conv1_1），它怎么把一个300*300*3的矩阵变成一个300*300*64的矩阵？</span><br></pre></td></tr></table></figure></p>
+<p><img src="/2018/07/16/深度学习笔记/p2.PNG" alt="p2"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">我们假设蓝色框是一个RGB图像，橙色是一个3*3*3的卷积核，我们对一个三维的27个数求和，然后扫过去，按照第一部分算的得出来的是一维的298*298的矩阵（因为卷积核也是三维所以结果是一维）；</span><br><span class="line">然后回想一下什么是Padding、前面也讲过它的概念了；所以不了一圈的圆，回到了300*300*1；</span><br><span class="line">然后，VGG16这一层安置有64个卷积核，那么，原来的300*300*1变成300*300*64</span><br><span class="line">于是我们的到了想要的东西；最后的绿色框；</span><br></pre></td></tr></table></figure></p>
+<h3 id="【1、从Conv1到Conv2之间的过度：】"><a href="#【1、从Conv1到Conv2之间的过度：】" class="headerlink" title="【1、从Conv1到Conv2之间的过度：】"></a>【1、从Conv1到Conv2之间的过度：】</h3><p><img src="/2018/07/16/深度学习笔记/p3.png" alt="p3"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">这一步用的Pooling是：2*2*64 s=2；</span><br><span class="line">也就是说，步长是二，滑动的矩阵本身没有重叠；刚好减半，第三维度64不变；</span><br></pre></td></tr></table></figure></p>
 <h3 id="【2、顺利来到Conv2并且结构完全一样进入Conv3：】"><a href="#【2、顺利来到Conv2并且结构完全一样进入Conv3：】" class="headerlink" title="【2、顺利来到Conv2并且结构完全一样进入Conv3：】"></a>【2、顺利来到Conv2并且结构完全一样进入Conv3：】</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">我们知道原来INPUT是300*300*3过了第一层出来时150*150*64</span><br><span class="line">那么第二层仍然有池化有128个卷积核，联想推理：</span><br><span class="line">出来的应该是75*75*128；这一步没有问题，我们继续往下分析：</span><br></pre></td></tr></table></figure>
-<h3 id="【4、进入Conv3的推演：】"><a href="#【4、进入Conv3的推演：】" class="headerlink" title="【4、进入Conv3的推演：】"></a>【4、进入Conv3的推演：】</h3><p><img src="深度学习笔记/p4.jpg" alt="p4"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">可以知道第三层有256个卷积核，包含三层小的卷基层：</span><br></pre></td></tr></table></figure></p>
-<h3 id="【5、从Conv3到Conv4之间的过度：】"><a href="#【5、从Conv3到Conv4之间的过度：】" class="headerlink" title="【5、从Conv3到Conv4之间的过度：】"></a>【5、从Conv3到Conv4之间的过度：】</h3><p><img src="深度学习笔记/p5.png" alt="p5"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">池化没有问题，但是这里75不是一个偶数怎么弄，还记得我们第一部分前面的括号吗？</span><br><span class="line">就是这样，我们在75这里相加了一个一，使之成为76，变成一个偶数，还有一种方法是通过步长的设置这里先不展开来讲了；</span><br></pre></td></tr></table></figure></p>
+<h3 id="【4、进入Conv3的推演：】"><a href="#【4、进入Conv3的推演：】" class="headerlink" title="【4、进入Conv3的推演：】"></a>【4、进入Conv3的推演：】</h3><p><img src="/2018/07/16/深度学习笔记/p4.jpg" alt="p4"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">可以知道第三层有256个卷积核，包含三层小的卷基层：</span><br></pre></td></tr></table></figure></p>
+<h3 id="【5、从Conv3到Conv4之间的过度：】"><a href="#【5、从Conv3到Conv4之间的过度：】" class="headerlink" title="【5、从Conv3到Conv4之间的过度：】"></a>【5、从Conv3到Conv4之间的过度：】</h3><p><img src="/2018/07/16/深度学习笔记/p5.png" alt="p5"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">池化没有问题，但是这里75不是一个偶数怎么弄，还记得我们第一部分前面的括号吗？</span><br><span class="line">就是这样，我们在75这里相加了一个一，使之成为76，变成一个偶数，还有一种方法是通过步长的设置这里先不展开来讲了；</span><br></pre></td></tr></table></figure></p>
 <p>More info: <a href="https://blog.csdn.net/errors_in_life/article/details/65950699" target="_blank" rel="noopener">Server</a></p>
 
       
@@ -787,6 +722,69 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/07/16/深度学习笔记/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
+    <article id="post-世界杯决赛" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/15/世界杯决赛/">世界杯决赛</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/15/世界杯决赛/" class="archive-article-date">
+  	<time datetime="2018-07-15T15:50:27.017Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="2018-7-15"><a href="#2018-7-15" class="headerlink" title="2018/7/15"></a>2018/7/15</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">法国队必胜</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/15/世界杯决赛/">展开全文 >></a>
         </p>
       
 
@@ -912,6 +910,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">flask</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">uwsgi</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">ssl配置</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
