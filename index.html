@@ -165,6 +165,132 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-flask-nginx-uwsgi-ssl配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/05/flask-nginx-uwsgi-ssl配置/">flask+nginx+uwsgi+ssl配置</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/05/flask-nginx-uwsgi-ssl配置/" class="archive-article-date">
+  	<time datetime="2019-04-05T02:30:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/05/flask-nginx-uwsgi-ssl配置/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
+    <article id="post-test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/05/test/">test</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/05/test/" class="archive-article-date">
+  	<time datetime="2019-04-05T02:29:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/05/test/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
     <article id="post-jieba实例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -676,137 +802,9 @@
 
 
   
-    <article id="post-python-统计高频词汇" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/18/python-统计高频词汇/">python 统计高频词汇</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/18/python-统计高频词汇/" class="archive-article-date">
-  	<time datetime="2018-08-18T01:15:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="python大法好"><a href="#python大法好" class="headerlink" title="python大法好"></a>python大法好</h1><p> get 一个操作word包：安装python-docx：pip install python_docx</p>
-<p> 废话不多说，直接上源码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import jieba<span class="comment">#jieba很有个性</span></span><br><span class="line">santi_text = open(<span class="string">'./santi.txt'</span>).<span class="built_in">read</span>()</span><br><span class="line">cut = jieba.cut(santi_text)</span><br><span class="line">get=<span class="string">','</span>.join(cut)<span class="comment">#get为str</span></span><br><span class="line">list=get.split(<span class="string">','</span>)</span><br><span class="line">word=[]</span><br><span class="line">num=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list:</span><br><span class="line"> <span class="keyword">if</span> i <span class="keyword">in</span> word:</span><br><span class="line">  num[word.index(i)]+=1</span><br><span class="line"> <span class="keyword">else</span>:</span><br><span class="line">  word.append(i)</span><br><span class="line">  num.append(1)</span><br><span class="line">fp=open(<span class="string">"reslut.xls"</span>,<span class="string">"w"</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> word:</span><br><span class="line"> fp.write(i+<span class="string">'\t'</span>+str(word.index(i)+<span class="string">'\n'</span>))</span><br><span class="line">fp.close()</span><br></pre></td></tr></table></figure></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/18/python-统计高频词汇/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-    <article id="post-数据库和抢红包的交互" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/15/数据库和抢红包的交互/">数据库和抢红包的交互</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/15/数据库和抢红包的交互/" class="archive-article-date">
-  	<time datetime="2018-08-15T06:18:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="数据库和抢红包的交互源码"><a href="#数据库和抢红包的交互源码" class="headerlink" title="数据库和抢红包的交互源码"></a>数据库和抢红包的交互源码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line">import pymysql</span><br><span class="line">import re</span><br><span class="line">import requests</span><br><span class="line">import json</span><br><span class="line">import time </span><br><span class="line">host=<span class="string">''</span></span><br><span class="line">port=3306</span><br><span class="line">user=<span class="string">''</span></span><br><span class="line">password=<span class="string">''</span></span><br><span class="line">db=<span class="string">''</span></span><br><span class="line">tabel=<span class="string">''</span></span><br><span class="line">def get_message():</span><br><span class="line">    connection = pymysql.connect(host=host, port=port, user=user, password=password, db=db, charset=<span class="string">'utf8mb4'</span>, cursorclass=pymysql.cursors.DictCursor)</span><br><span class="line">    cursor = connection.cursor()</span><br><span class="line">    <span class="comment">#print('ok')</span></span><br><span class="line">    sql=<span class="string">"SELECT * FROM `%s`"</span>%(tabel)</span><br><span class="line">    cursor.execute(sql)</span><br><span class="line">    result= cursor.fetchall()</span><br><span class="line">    <span class="comment">#print(result)</span></span><br><span class="line">    <span class="keyword">if</span> result:</span><br><span class="line">        <span class="built_in">return</span> result</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">return</span> False</span><br><span class="line">def add_mysql(r_id,r_money,r_type):</span><br><span class="line">    connection = pymysql.connect(host=host, port=port, user=user, password=password, db=db, charset=<span class="string">'utf8mb4'</span>, cursorclass=pymysql.cursors.DictCursor)</span><br><span class="line">    cursor = connection.cursor()</span><br><span class="line"></span><br><span class="line">    sql1=<span class="string">"UPDATE `%s` SET `r_money` = '%s' WHERE `%s`.`r_id` = %s;"</span>%(tabel,str(r_money),tabel,str(r_id))</span><br><span class="line">    sql2=<span class="string">"UPDATE `%s` SET `r_type` = '%s' WHERE `%s`.`r_id` = %s;"</span>%(tabel,str(r_type),tabel,str(r_id))</span><br><span class="line">    try:    </span><br><span class="line">       cursor.execute(sql1)  </span><br><span class="line">       cursor.execute(sql2)  </span><br><span class="line">       connection.commit()  </span><br><span class="line">    except:  </span><br><span class="line">       connection.rollback()  </span><br><span class="line">       connection.close()</span><br><span class="line">       <span class="built_in">return</span> False </span><br><span class="line">    connection.close()</span><br><span class="line">    <span class="built_in">return</span> True</span><br><span class="line">def post_web(phone,url):</span><br><span class="line">    data=&#123;</span><br><span class="line">        <span class="string">'phone'</span>: phone,</span><br><span class="line">        <span class="string">'url'</span>: url</span><br><span class="line">        &#125;</span><br><span class="line">    headers=&#123;</span><br><span class="line">        <span class="string">'user-agent'</span>: <span class="string">'Mozilla/5.0 (Linux; Android 5.1; m1 metal Build/LMY47I; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/53.0.2785.49 Mobile MQQBrowser/6.2 TBS/043409 Safari/537.36 V1ANDSQ7.2.5744YYBD QQ/7.2.5.3305 NetType/WIFI WebP/0.3.0 Pixel/1080'</span>,</span><br><span class="line">         <span class="string">'x-user-token'</span>:<span class="string">''</span></span><br><span class="line">         &#125;</span><br><span class="line">    web=<span class="string">'https://mtdhb.z.xxooweb.com/user/receiving'</span></span><br><span class="line">    html=requests.post(web,headers=headers,data=data)</span><br><span class="line">    text = json.loads(html.text)</span><br><span class="line">    <span class="comment">#print(text)</span></span><br><span class="line">    <span class="keyword">if</span> text[<span class="string">'code'</span>]==0:</span><br><span class="line">        <span class="built_in">return</span> text</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">return</span> False; </span><br><span class="line">def get_web():</span><br><span class="line">     headers=&#123;</span><br><span class="line">        <span class="string">'user-agent'</span>: <span class="string">'Mozilla/5.0 (Linux; Android 5.1; m1 metal Build/LMY47I; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/53.0.2785.49 Mobile MQQBrowser/6.2 TBS/043409 Safari/537.36 V1ANDSQ7.2.5744YYBD QQ/7.2.5.3305 NetType/WIFI WebP/0.3.0 Pixel/1080'</span>,</span><br><span class="line">         <span class="string">'x-user-token'</span>:<span class="string">''</span></span><br><span class="line">         &#125;</span><br><span class="line">     web=r<span class="string">'https://mtdhb.z.xxooweb.com/user/receiving'</span></span><br><span class="line">     html=requests.get(web,headers=headers)</span><br><span class="line">     text = json.loads(html.text)</span><br><span class="line">     <span class="comment">#print(text['data'])</span></span><br><span class="line">     <span class="built_in">return</span> text[<span class="string">'data'</span>][0][<span class="string">'price'</span>]</span><br><span class="line">def note(r_phone,r_money):</span><br><span class="line">    file=open(<span class="string">"note.txt"</span>,<span class="string">"a"</span>)</span><br><span class="line">    file.write(time.strftime(<span class="string">'%Y-%m-%d %H:%M:%S'</span>,time.localtime(time.time()))+<span class="string">' '</span>+str(r_phone)+<span class="string">'----'</span>+str(r_money)+<span class="string">'\n'</span>)</span><br><span class="line">    file.close()</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span> :   </span><br><span class="line">    <span class="keyword">while</span>(1):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"starting……"</span>)</span><br><span class="line">        try:</span><br><span class="line">            text=get_message()</span><br><span class="line">            <span class="keyword">for</span> message <span class="keyword">in</span> text:</span><br><span class="line">                r_id=message[<span class="string">'r_id'</span>]</span><br><span class="line">                <span class="comment">#print(message['r_type'] )</span></span><br><span class="line">                <span class="keyword">if</span>(not message[<span class="string">'r_type'</span>] or message[<span class="string">'r_type'</span>]==<span class="string">'0'</span> or message[<span class="string">'r_type'</span>]==0):</span><br><span class="line">                    is_true=post_web(message[<span class="string">'r_tel'</span>],message[<span class="string">'r_url'</span>])</span><br><span class="line">                    <span class="built_in">print</span>(message[<span class="string">'r_tel'</span>],str(is_true))</span><br><span class="line">                    <span class="keyword">if</span>(is_true):</span><br><span class="line">                        time.sleep(10)</span><br><span class="line">                        now=get_web()</span><br><span class="line">                        <span class="built_in">print</span>(now)</span><br><span class="line">                        <span class="keyword">if</span>(now):</span><br><span class="line">                            add_mysql(r_id,now,1)</span><br><span class="line">                            <span class="built_in">print</span>(<span class="string">"导入一条已抢数据"</span>)</span><br><span class="line">                            note(message[<span class="string">'r_tel'</span>],now)</span><br><span class="line">                        <span class="keyword">else</span>:</span><br><span class="line">                            add_mysql(r_id,0,2)      </span><br><span class="line">                            <span class="built_in">print</span>(<span class="string">"导入一条被抢数据"</span>)  </span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                        add_mysql(r_id,0,2)      </span><br><span class="line">                        <span class="built_in">print</span>(<span class="string">"导入一条被抢数据"</span>)  </span><br><span class="line">        except :</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"error"</span>)</span><br><span class="line">            <span class="built_in">continue</span></span><br><span class="line">        time.sleep(5)</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/15/数据库和抢红包的交互/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -818,7 +816,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 章金凯
+    		&copy; 2019 章金凯
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
