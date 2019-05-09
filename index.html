@@ -165,6 +165,86 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-微信小程序开发之『弹出菜单』特效" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/09/微信小程序开发之『弹出菜单』特效/">微信小程序开发之『弹出菜单』特效</a>
+    </h1>
+  
+
+
+        
+        <a href="/2019/05/09/微信小程序开发之『弹出菜单』特效/" class="archive-article-date">
+  	<time datetime="2019-05-09T15:10:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>效果<br><img src="/2019/05/09/微信小程序开发之『弹出菜单』特效/demo.gif" alt="p1"><br></p>
+        
+          <a class="article-more-a" href="/2019/05/09/微信小程序开发之『弹出菜单』特效/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小程序</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+	  
+      
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/09/微信小程序开发之『弹出菜单』特效/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
     <article id="post-网页抽签器" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -837,72 +917,6 @@
 
 
   
-    <article id="post-免费下载VIP视频" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/31/免费下载VIP视频/">免费下载VIP视频</a>
-    </h1>
-  
-
-
-        
-        <a href="/2018/08/31/免费下载VIP视频/" class="archive-article-date">
-  	<time datetime="2018-08-31T07:36:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line">import multiprocessing</span><br><span class="line"></span><br><span class="line">def templ(n):</span><br><span class="line">    url=<span class="string">"https://vip888.kuyun99.com/20180830/CXsoJzdZ/800kb/hls/ZRjsQl4609%03d.ts"</span>%n</span><br><span class="line">    headers=&#123;</span><br><span class="line">        <span class="string">"User-Agent"</span>:<span class="string">"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="built_in">print</span>(url)</span><br><span class="line">    r=requests.get(url,headers=headers)</span><br><span class="line">    f=open(<span class="string">'./mp4/&#123;&#125;.mp4'</span>.format(url[-10:-3]),<span class="string">"ab"</span>)</span><br><span class="line">    f.write(r.content)</span><br><span class="line">    f.close()</span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</span><br><span class="line">    pool=multiprocessing.Pool(20)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(674):</span><br><span class="line">        pool.apply_async(templ,(i,))</span><br><span class="line">    pool.close()</span><br><span class="line">    pool.join()</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	  
-      
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/31/免费下载VIP视频/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1030,6 +1044,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">股票</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
               </li>
              
               <li class="article-tag-list-item">

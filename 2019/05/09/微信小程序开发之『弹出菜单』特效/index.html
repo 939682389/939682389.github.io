@@ -6,16 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Zkk的博客</title>
+  <title>微信小程序开发之『弹出菜单』特效 | Zkk的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="Luck">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zkk的博客">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="效果">
+<meta name="keywords" content="小程序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信小程序开发之『弹出菜单』特效">
+<meta property="og:url" content="http://yoursite.com/2019/05/09/微信小程序开发之『弹出菜单』特效/index.html">
 <meta property="og:site_name" content="Zkk的博客">
+<meta property="og:description" content="效果">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/05/09/微信小程序开发之『弹出菜单』特效/demo.gif">
+<meta property="og:updated_time" content="2019-05-09T15:24:45.819Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zkk的博客">
+<meta name="twitter:title" content="微信小程序开发之『弹出菜单』特效">
+<meta name="twitter:description" content="效果">
+<meta name="twitter:image" content="http://yoursite.com/2019/05/09/微信小程序开发之『弹出菜单』特效/demo.gif">
   
     <link rel="alternative" href="/atom.xml" title="Zkk的博客" type="application/atom+xml">
   
@@ -163,172 +169,205 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-微信小程序开发之『弹出菜单』特效" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      微信小程序开发之『弹出菜单』特效
+    </h1>
+  
+
+
+        
+        <a href="/2019/05/09/微信小程序开发之『弹出菜单』特效/" class="archive-article-date">
+  	<time datetime="2019-05-09T15:10:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-09</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>效果<br><img src="/2019/05/09/微信小程序开发之『弹出菜单』特效/demo.gif" alt="p1"><br><a id="more"></a><br><figure class="highlight javascript"><figcaption><span>popMenu.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">    data: &#123;</span><br><span class="line">        isPopping: <span class="literal">false</span>,<span class="comment">//是否已经弹出</span></span><br><span class="line">        animPlus: &#123;&#125;,<span class="comment">//旋转动画</span></span><br><span class="line">        animCollect: &#123;&#125;,<span class="comment">//item位移,透明度</span></span><br><span class="line">        animTranspond: &#123;&#125;,<span class="comment">//item位移,透明度</span></span><br><span class="line">        animInput: &#123;&#125;,<span class="comment">//item位移,透明度</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//点击弹出</span></span><br><span class="line">    plus: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.data.isPopping) &#123;</span><br><span class="line">            <span class="comment">//缩回动画</span></span><br><span class="line">            <span class="keyword">this</span>.popp();</span><br><span class="line">            <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">                isPopping: <span class="literal">false</span></span><br><span class="line">            &#125;)</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (!<span class="keyword">this</span>.data.isPopping) &#123;</span><br><span class="line">            <span class="comment">//弹出动画</span></span><br><span class="line">            <span class="keyword">this</span>.takeback();</span><br><span class="line">            <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">                isPopping: <span class="literal">true</span></span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    input: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"input"</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    transpond: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"transpond"</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    collect: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"collect"</span>)</span><br><span class="line">    &#125;,</span><br><span class="line"> </span><br><span class="line">    <span class="comment">//弹出动画</span></span><br><span class="line">    popp: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">//plus顺时针旋转</span></span><br><span class="line">        <span class="keyword">var</span> animationPlus = wx.createAnimation(&#123;</span><br><span class="line">            duration: <span class="number">500</span>,</span><br><span class="line">            timingFunction: <span class="string">'ease-out'</span></span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="keyword">var</span> animationcollect = wx.createAnimation(&#123;</span><br><span class="line">            duration: <span class="number">500</span>,</span><br><span class="line">            timingFunction: <span class="string">'ease-out'</span></span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="keyword">var</span> animationTranspond = wx.createAnimation(&#123;</span><br><span class="line">            duration: <span class="number">500</span>,</span><br><span class="line">            timingFunction: <span class="string">'ease-out'</span></span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="keyword">var</span> animationInput = wx.createAnimation(&#123;</span><br><span class="line">            duration: <span class="number">500</span>,</span><br><span class="line">            timingFunction: <span class="string">'ease-out'</span></span><br><span class="line">        &#125;)</span><br><span class="line">        animationPlus.rotateZ(<span class="number">180</span>).step();</span><br><span class="line">        animationcollect.translate(<span class="number">-100</span>, <span class="number">-100</span>).rotateZ(<span class="number">180</span>).opacity(<span class="number">1</span>).step();</span><br><span class="line">        animationTranspond.translate(<span class="number">-140</span>, <span class="number">0</span>).rotateZ(<span class="number">180</span>).opacity(<span class="number">1</span>).step();</span><br><span class="line">        animationInput.translate(<span class="number">-100</span>, <span class="number">100</span>).rotateZ(<span class="number">180</span>).opacity(<span class="number">1</span>).step();</span><br><span class="line">        <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">            animPlus: animationPlus.export(),</span><br><span class="line">            animCollect: animationcollect.export(),</span><br><span class="line">            animTranspond: animationTranspond.export(),</span><br><span class="line">            animInput: animationInput.export(),</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//收回动画</span></span><br><span class="line">    takeback: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">//plus逆时针旋转</span></span><br><span class="line">        <span class="keyword">var</span> animationPlus = wx.createAnimation(&#123;</span><br><span class="line">            duration: <span class="number">500</span>,</span><br><span class="line">            timingFunction: <span class="string">'ease-out'</span></span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="keyword">var</span> animationcollect = wx.createAnimation(&#123;</span><br><span class="line">            duration: <span class="number">500</span>,</span><br><span class="line">            timingFunction: <span class="string">'ease-out'</span></span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="keyword">var</span> animationTranspond = wx.createAnimation(&#123;</span><br><span class="line">            duration: <span class="number">500</span>,</span><br><span class="line">            timingFunction: <span class="string">'ease-out'</span></span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="keyword">var</span> animationInput = wx.createAnimation(&#123;</span><br><span class="line">            duration: <span class="number">500</span>,</span><br><span class="line">            timingFunction: <span class="string">'ease-out'</span></span><br><span class="line">        &#125;)</span><br><span class="line">        animationPlus.rotateZ(<span class="number">0</span>).step();</span><br><span class="line">        animationcollect.translate(<span class="number">0</span>, <span class="number">0</span>).rotateZ(<span class="number">0</span>).opacity(<span class="number">0</span>).step();</span><br><span class="line">        animationTranspond.translate(<span class="number">0</span>, <span class="number">0</span>).rotateZ(<span class="number">0</span>).opacity(<span class="number">0</span>).step();</span><br><span class="line">        animationInput.translate(<span class="number">0</span>, <span class="number">0</span>).rotateZ(<span class="number">0</span>).opacity(<span class="number">0</span>).step();</span><br><span class="line">        <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">            animPlus: animationPlus.export(),</span><br><span class="line">            animCollect: animationcollect.export(),</span><br><span class="line">            animTranspond: animationTranspond.export(),</span><br><span class="line">            animInput: animationInput.export(),</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    onLoad: <span class="function"><span class="keyword">function</span> (<span class="params">options</span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 生命周期函数--监听页面加载</span></span><br><span class="line">    &#125;,</span><br><span class="line">    onReady: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 生命周期函数--监听页面初次渲染完成</span></span><br><span class="line">    &#125;,</span><br><span class="line">    onShow: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 生命周期函数--监听页面显示</span></span><br><span class="line">    &#125;,</span><br><span class="line">    onHide: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 生命周期函数--监听页面隐藏</span></span><br><span class="line">    &#125;,</span><br><span class="line">    onUnload: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 生命周期函数--监听页面卸载</span></span><br><span class="line">    &#125;,</span><br><span class="line">    onPullDownRefresh: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 页面相关事件处理函数--监听用户下拉动作</span></span><br><span class="line">    &#125;,</span><br><span class="line">    onReachBottom: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 页面上拉触底事件的处理函数</span></span><br><span class="line">    &#125;,</span><br><span class="line">    onShareAppMessage: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 用户点击右上角分享</span></span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            title: <span class="string">'title'</span>, <span class="comment">// 分享标题</span></span><br><span class="line">            desc: <span class="string">'desc'</span>, <span class="comment">// 分享描述</span></span><br><span class="line">            path: <span class="string">'path'</span> <span class="comment">// 分享路径</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight html"><figcaption><span>popMenu.wxml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">image</span> <span class="attr">src</span>=<span class="string">"/pages/images/collect.png"</span> <span class="attr">class</span>=<span class="string">"img-style"</span> <span class="attr">animation</span>=<span class="string">""</span> <span class="attr">bindtap</span>=<span class="string">"collect"</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">image</span> <span class="attr">src</span>=<span class="string">"/pages/images/transpond.png"</span> <span class="attr">class</span>=<span class="string">"img-style"</span> <span class="attr">animation</span>=<span class="string">""</span> <span class="attr">bindtap</span>=<span class="string">"transpond"</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">image</span> <span class="attr">src</span>=<span class="string">"/pages/images/input.png"</span> <span class="attr">class</span>=<span class="string">"img-style"</span> <span class="attr">animation</span>=<span class="string">""</span> <span class="attr">bindtap</span>=<span class="string">"input"</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">image</span> <span class="attr">src</span>=<span class="string">"/pages/images/plus.png"</span> <span class="attr">class</span>=<span class="string">"img-plus-style"</span> <span class="attr">animation</span>=<span class="string">""</span> <span class="attr">bindtap</span>=<span class="string">"plus"</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><figcaption><span>popMenu.wxss</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-class">.img-plus-style</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">150</span>rpx;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">150</span>rpx;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">bottom</span>: <span class="number">250</span>rpx;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">100</span>rpx;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">100</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.img-style</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">150</span>rpx;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">150</span>rpx;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">bottom</span>: <span class="number">250</span>rpx;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">100</span>rpx;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://www.xianuan.xyz/pic/zhifu%E6%94%B6%E6%AC%BE.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://www.xianuan.xyz/pic/%E6%94%B6%E6%AC%BE.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小程序</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+	  
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	  
+      
+
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/23/jieba实例/" class="archive-article-date">
-  	<time datetime="2018-12-23T08:50:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/23/jieba实例/">jieba实例</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/09/微信小程序开发之『弹出菜单』特效/" alt="微信分享二维码">
+    </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-          
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/15/自定义菜单menu/" class="archive-article-date">
-  	<time datetime="2018-11-15T04:54:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-15</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/05/04/网页抽签器/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">网页抽签器</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/15/自定义菜单menu/">自定义菜单menu</a>
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-          
 
+  
+  
+  
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/10/31/爬取全国高校/" class="archive-article-date">
-  	<time datetime="2018-10-31T05:42:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-31</time>
-</a>
-        </div>
-    	 
+  <div id="SOHUCS" sid="微信小程序开发之『弹出菜单』特效"></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js"></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/10/31/爬取全国高校/">爬取全国高校</a>
-    </h1>
+
+  
+
   
 
 
-        <div class="article-info info-on-right">
-          
-          
+            <! -- 添加版权信息 -->
+<div class="article-footer-copyright">
+<center>本文由<b><a href="/index.html" target="_blank" title="Zkk">Zkk</a></b>创作和发表,采用<b>BY</b>-<b>NC</b>-<b>SA</b>国际许可协议进行许可</center>
 
+<center>转载请注明作者及出处,本文作者为<b><a href="/index.html" target="_blank" title="Zkk">Zkk</a></b>,本文标题为<b><a href="/2019/05/09/微信小程序开发之『弹出菜单』特效/" target="_blank" title="微信小程序开发之『弹出菜单』特效">微信小程序开发之『弹出菜单』特效</a></b></center>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/17/爬虫爬论文/" class="archive-article-date">
-  	<time datetime="2018-09-17T04:50:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/17/爬虫爬论文/">爬虫爬论文</a>
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/03/深度学习/" class="archive-article-date">
-  	<time datetime="2018-09-03T08:00:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/03/深度学习/">深度学习</a>
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="page-number" href="/archives/page/5/">5</a><a class="extend next" rel="next" href="/archives/page/3/">Next &raquo;</a>
-    </nav>
-  
-
+<center>本文链接为<b><a href="/2019/05/09/微信小程序开发之『弹出菜单』特效/" target="_blank" title="微信小程序开发之『弹出菜单』特效">http://yoursite.com/2019/05/09/微信小程序开发之『弹出菜单』特效/</a></b>.</center>
+</div>
+<! -- 添加版权信息 -->
+        
 
           </div>
         </div>
@@ -355,8 +394,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
