@@ -160,6 +160,73 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-网络爬虫下纹理图片" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/03/网络爬虫下纹理图片/">网络爬虫下纹理图片</a>
+    </h1>
+  
+
+
+        
+        <a href="/2018/08/03/网络爬虫下纹理图片/" class="archive-article-date">
+  	<time datetime="2018-08-03T05:39:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="图片爬虫-上代码"><a href="#图片爬虫-上代码" class="headerlink" title="图片爬虫 上代码"></a>图片爬虫 上代码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="string">""</span><span class="string">"</span></span><br><span class="line"><span class="string">Created on Wed Jul 18 13:06:07 2018</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">@author: zjk</span></span><br><span class="line"><span class="string">"</span><span class="string">""</span></span><br><span class="line"></span><br><span class="line">import re</span><br><span class="line">import requests </span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line">def dowmloadPic(html):</span><br><span class="line">    url=r<span class="string">'http://textures.forrest.cz/'</span></span><br><span class="line">    j=1</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'进程开始'</span>)</span><br><span class="line">    dirpath=r<span class="string">'D:\zjk\2018暑假'</span>   </span><br><span class="line">    kind=re.findall(<span class="string">' &lt;a href="(\S+)" class="td-galitem-title"&gt;[\S ]+&lt;/a&gt; &amp;nbsp;&amp;nbsp;'</span>,html)</span><br><span class="line"><span class="comment">#==============================================================================</span></span><br><span class="line"><span class="comment">#     print(kind)</span></span><br><span class="line"><span class="comment">#==============================================================================</span></span><br><span class="line">    number=re.findall(<span class="string">'([\d]+) pictures'</span>,html) </span><br><span class="line"><span class="comment">#==============================================================================</span></span><br><span class="line"><span class="comment">#     print(number)</span></span><br><span class="line"><span class="comment">#==============================================================================</span></span><br><span class="line">    dirname=<span class="string">'Texture'</span></span><br><span class="line">    new_path=os.path.join(dirpath,dirname)</span><br><span class="line">    <span class="keyword">if</span> not os.path.isdir(new_path):</span><br><span class="line">        os.makedirs(new_path) <span class="comment">#创建目录保存每个网页上的图片</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"创建"</span>)</span><br><span class="line">    sum=len(kind)</span><br><span class="line">    pic_num=1</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(sum):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(int(number[i])):</span><br><span class="line"><span class="comment">#==============================================================================</span></span><br><span class="line"><span class="comment">#             print(kind[i])</span></span><br><span class="line"><span class="comment">#==============================================================================</span></span><br><span class="line">            dirtype= re.findall(<span class="string">"spgmGal=([\S]+)"</span>,kind[i])[0]</span><br><span class="line">            branch_path=os.path.join(new_path,dirtype)</span><br><span class="line">            <span class="keyword">if</span> not os.path.isdir(branch_path):</span><br><span class="line">                os.makedirs(branch_path) <span class="comment">#创建目录保存每个网页上的图片</span></span><br><span class="line">                <span class="built_in">print</span>(<span class="string">"创建"</span>+branch_path+<span class="string">"文件夹"</span>)   </span><br><span class="line">            find_img=r<span class="string">'http://textures.forrest.cz/index.php?spgmGal=%s&amp;spgmPic=%d#spgmPicture'</span>%(dirtype,j)</span><br><span class="line">            html=requests.get(find_img).text</span><br><span class="line">            img_url=re.findall(<span class="string">'&lt;img id="picture" src="([\S]+)" '</span>,html)[0]</span><br><span class="line"><span class="comment">#==============================================================================</span></span><br><span class="line"><span class="comment">#             print(img_url)</span></span><br><span class="line"><span class="comment">#==============================================================================</span></span><br><span class="line">            pic_name=img_url.split(<span class="string">'/'</span>)[-1]</span><br><span class="line"><span class="comment">#==============================================================================</span></span><br><span class="line"><span class="comment">#             print(pic_name)</span></span><br><span class="line"><span class="comment">#==============================================================================</span></span><br><span class="line">            pic_url=url+img_url</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">'正在下载第'</span> + str(pic_num) + <span class="string">'张图片'</span>)</span><br><span class="line">            try:</span><br><span class="line">                   pic = requests.get(pic_url, timeout=10)</span><br><span class="line">            except requests.exceptions.ConnectionError:</span><br><span class="line">                   <span class="built_in">print</span>(<span class="string">'【错误】当前图片无法下载'</span>)</span><br><span class="line">                   <span class="built_in">continue</span></span><br><span class="line"> </span><br><span class="line">            dir = branch_path + <span class="string">'\\'</span>  + pic_name</span><br><span class="line">            fp = open(dir, <span class="string">'wb'</span>)</span><br><span class="line">            fp.write(pic.content)</span><br><span class="line">            fp.close()</span><br><span class="line">            pic_num += 1</span><br><span class="line">        </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    url =r<span class="string">'http://textures.forrest.cz/index.php?'</span></span><br><span class="line">    result=requests.get(url)</span><br><span class="line">    <span class="comment">#print(result.text)</span></span><br><span class="line">    dowmloadPic(result.text)</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	  
+      
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/03/网络爬虫下纹理图片/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
     <article id="post-python邮件收发" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -704,6 +771,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">股票</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">树莓派</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
               </li>
              
               <li class="article-tag-list-item">
