@@ -6,19 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018 | Zkk的博客</title>
+  <title>Bi-Directional Cascade Network for Perceptual Edge Detection | Zkk的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="谢谢你来了">
-<meta name="keywords" content="Luck">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zkk的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2018/page/4/index.html">
+  <meta name="description" content="该论文是一篇CVPR2019，本文主要是利用双向网络解决边缘检测问题，效果图如下：">
+<meta name="keywords" content="深度学习,边缘检测">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bi-Directional Cascade Network for Perceptual Edge Detection">
+<meta property="og:url" content="http://yoursite.com/2019/07/04/Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection/index.html">
 <meta property="og:site_name" content="Zkk的博客">
-<meta property="og:description" content="谢谢你来了">
+<meta property="og:description" content="该论文是一篇CVPR2019，本文主要是利用双向网络解决边缘检测问题，效果图如下：">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/07/04/Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection/effect.jpg">
+<meta property="og:updated_time" content="2019-07-04T09:23:28.868Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zkk的博客">
-<meta name="twitter:description" content="谢谢你来了">
+<meta name="twitter:title" content="Bi-Directional Cascade Network for Perceptual Edge Detection">
+<meta name="twitter:description" content="该论文是一篇CVPR2019，本文主要是利用双向网络解决边缘检测问题，效果图如下：">
+<meta name="twitter:image" content="http://yoursite.com/2019/07/04/Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection/effect.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Zkk的博客" type="application/atom+xml">
   
@@ -158,172 +161,223 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Bi-Directional Cascade Network for Perceptual Edge Detection
+    </h1>
+  
+
+
+        
+        <a href="/2019/07/04/Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection/" class="archive-article-date">
+  	<time datetime="2019-07-04T08:53:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-04</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>该论文是一篇CVPR2019，本文主要是利用双向网络解决边缘检测问题，效果图如下：<br><img src="/2019/07/04/Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection/effect.jpg" alt="logo"></p>
+<a id="more"></a>
+<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p>论文地址：<a href="https://arxiv.org/pdf/1902.10903.pdf" target="_blank" rel="noopener">paper</a><br>代码地址：<a href="https://github.com/pkuCactus/BDCN" target="_blank" rel="noopener">code</a><br>数据集地址：<a href="https://www.pkuvmc.com/dataset.html" target="_blank" rel="noopener">dataset</a></p>
+<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>边缘检测目标从自然图像中提取目标边界和感知突出的边缘，保留了图像的轮廓，忽略图像的细节。本文作者主要利用一种双向的(bi-directional)级联网络结构，分别由浅层到深层和由深层到前浅层进行检测。</p>
+<h1 id="相关方法"><a href="#相关方法" class="headerlink" title="相关方法"></a>相关方法</h1><h2 id="1-利用层次结构特性（hierarchal-features）"><a href="#1-利用层次结构特性（hierarchal-features）" class="headerlink" title="1.利用层次结构特性（hierarchal features）"></a>1.利用层次结构特性（hierarchal features）</h2><p>利用卷积神经网络(CNN)学习的层次特征，获得多尺度表示。</p>
+<h2 id="2-图像金字塔"><a href="#2-图像金字塔" class="headerlink" title="2.图像金字塔"></a>2.图像金字塔</h2><p>利用图像金字塔和多尺度融合，从而实现边缘检测。</p>
+<h2 id="3-深层网络"><a href="#3-深层网络" class="headerlink" title="3.深层网络"></a>3.深层网络</h2><p>利用更深的网络，更多参数实现边缘检测。</p>
+<h1 id="创新"><a href="#创新" class="headerlink" title="创新"></a>创新</h1><h2 id="1-ID-Block"><a href="#1-ID-Block" class="headerlink" title="1.ID Block"></a>1.ID Block</h2><p>每个ID Block由两个边缘检测器(edge detector)，分别对由深到浅和由浅到深的卷积层进行监督。</p>
+<h2 id="2-Scale-Enhancement-Module-SEM"><a href="#2-Scale-Enhancement-Module-SEM" class="headerlink" title="2.Scale Enhancement Module(SEM)"></a>2.Scale Enhancement Module(SEM)</h2><p>利用SEM对输入图像进行卷积膨胀，从而扩大感受野(receptive field)</p>
+<h1 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h1><pre><code>• BSDS500 （200 images for training, 100 images for validation, and 200 images for testing）
+• NYUDv2 （381 training, 414 validation, and 654 testing images）
+• Multicue 
+</code></pre><h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><pre><code>• PyTorch
+• VGG16 [44] pretrained on ImageNet 
+• NVIDIA GeForce1080Ti GPU 
+</code></pre><p>#评价指标<br>    • Average Precision (AP),<br>    • as well as F-measure at both Optimal Dataset Scale (ODS)<br>    • and Optimal Image Scale (OIS) </p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://www.xianuan.xyz/pic/zhifu%E6%94%B6%E6%AC%BE.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://www.xianuan.xyz/pic/%E6%94%B6%E6%AC%BE.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">深度学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">边缘检测</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+	  
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	  
+      
+
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/qss/" class="archive-article-date">
-  	<time datetime="2018-07-21T01:36:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/qss/">QSS</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/04/Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection/" alt="微信分享二维码">
+    </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-          
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/深度学习第一步/" class="archive-article-date">
-  	<time datetime="2018-07-21T00:55:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/06/25/vb计算报价/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vb计算报价</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/深度学习第一步/">深度学习第一步</a>
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-          
 
+  
+  
+  
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/16/深度学习笔记/" class="archive-article-date">
-  	<time datetime="2018-07-16T10:04:15.920Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-16</time>
-</a>
-        </div>
-    	 
+  <div id="SOHUCS" sid="Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection"></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js"></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/16/深度学习笔记/">深度学习笔记</a>
-    </h1>
+
+  
+
   
 
 
-        <div class="article-info info-on-right">
-          
-          
+            <! -- 添加版权信息 -->
+<div class="article-footer-copyright">
+<center>本文由<b><a href="/index.html" target="_blank" title="Zkk">Zkk</a></b>创作和发表,采用<b>BY</b>-<b>NC</b>-<b>SA</b>国际许可协议进行许可</center>
 
+<center>转载请注明作者及出处,本文作者为<b><a href="/index.html" target="_blank" title="Zkk">Zkk</a></b>,本文标题为<b><a href="/2019/07/04/Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection/" target="_blank" title="Bi-Directional Cascade Network for Perceptual Edge Detection">Bi-Directional Cascade Network for Perceptual Edge Detection</a></b></center>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/15/世界杯决赛/" class="archive-article-date">
-  	<time datetime="2018-07-15T15:50:27.017Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/15/世界杯决赛/">世界杯决赛</a>
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/14/十六进制转字符串/" class="archive-article-date">
-  	<time datetime="2018-07-14T05:07:47.544Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/14/十六进制转字符串/">十六进制转字符串DAY1</a>
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2018/page/3/">&laquo; Prev</a><a class="page-number" href="/archives/2018/">1</a><a class="page-number" href="/archives/2018/page/2/">2</a><a class="page-number" href="/archives/2018/page/3/">3</a><span class="page-number current">4</span>
-    </nav>
-  
-
+<center>本文链接为<b><a href="/2019/07/04/Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection/" target="_blank" title="Bi-Directional Cascade Network for Perceptual Edge Detection">http://yoursite.com/2019/07/04/Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection/</a></b>.</center>
+</div>
+<! -- 添加版权信息 -->
+        
 
           </div>
         </div>
@@ -350,8 +404,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
