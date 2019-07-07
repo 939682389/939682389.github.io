@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
+  <link rel="stylesheet" href="/fa-brands/css/fa-brands.min.css">
+<link rel="stylesheet" href="/fa-regular/css/fa-regular.min.css">
+<link rel="stylesheet" href="/fa-solid/css/fa-solid.min.css">
+<link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css">
+<link rel="stylesheet" href="/fontawesome-all/css/fontawesome-all.css">
+<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://www.chinazkk.cn">
   <title>flask+nginx+uwsgi+ssl配置 | Zkk的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文利用flask后端框架配置https域名测试代码如下：hello.py123456789from flask import Flaskapp = Flask(__name__)@app.route(&quot;/&quot;)def hello():    return &quot;Hello World!&quot;if __name__ == &quot;__main__&quot;:    app.run(host=&apos;127.0.0.1&apos;)">
+  <meta name="description" content="本文利用flask后端框架配置https域名测试代码如下： hello.py123456789from flask import Flaskapp = Flask(__name__)@app.route(&quot;/&quot;)def hello():    return &quot;Hello World!&quot;if __name__ == &quot;__main__&quot;:    app.run(host=&apos;127.0.0.1&apos;)">
 <meta name="keywords" content="flask,nginx,uwsgi,ssl配置">
 <meta property="og:type" content="article">
 <meta property="og:title" content="flask+nginx+uwsgi+ssl配置">
 <meta property="og:url" content="https://www.chinazkk.cn/2019/04/05/flask-nginx-uwsgi-ssl配置/index.html">
 <meta property="og:site_name" content="Zkk的博客">
-<meta property="og:description" content="本文利用flask后端框架配置https域名测试代码如下：hello.py123456789from flask import Flaskapp = Flask(__name__)@app.route(&quot;/&quot;)def hello():    return &quot;Hello World!&quot;if __name__ == &quot;__main__&quot;:    app.run(host=&apos;127.0.0.1&apos;)">
+<meta property="og:description" content="本文利用flask后端框架配置https域名测试代码如下： hello.py123456789from flask import Flaskapp = Flask(__name__)@app.route(&quot;/&quot;)def hello():    return &quot;Hello World!&quot;if __name__ == &quot;__main__&quot;:    app.run(host=&apos;127.0.0.1&apos;)">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-04-05T04:11:23.244Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="flask+nginx+uwsgi+ssl配置">
-<meta name="twitter:description" content="本文利用flask后端框架配置https域名测试代码如下：hello.py123456789from flask import Flaskapp = Flask(__name__)@app.route(&quot;/&quot;)def hello():    return &quot;Hello World!&quot;if __name__ == &quot;__main__&quot;:    app.run(host=&apos;127.0.0.1&apos;)">
+<meta name="twitter:description" content="本文利用flask后端框架配置https域名测试代码如下： hello.py123456789from flask import Flaskapp = Flask(__name__)@app.route(&quot;/&quot;)def hello():    return &quot;Hello World!&quot;if __name__ == &quot;__main__&quot;:    app.run(host=&apos;127.0.0.1&apos;)">
   
     <link rel="alternative" href="/atom.xml" title="Zkk的博客" type="application/atom+xml">
   
@@ -62,6 +68,8 @@
 			
 				<li><a href="/">主页</a></li>
 	        
+				<li><a href="/archives/index.html">归档</a></li>
+	        
 				<li><a href="/photos/">相册</a></li>
 	        
 			</ul>
@@ -84,18 +92,14 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="https://939682389.github.io/" title="github"><i class="icon-github"></i></a>
+					<a class="github" target="_blank" href="https://github.com/939682389" title="github"><i class="icon-github"></i></a>
 		        
 					<a class="weibo" target="_blank" href="https://weibo.com/3127334371/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="mail" target="_blank" href="/939682389@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
 	
 			<div style="position:absolute; bottom:120px left:auto; width:85%">
-				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="250" height="86" src="//music.163.com/outchain/player?type=2&id=1309359893&auto=1&height=66"></iframe>
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=250 height=86 src="//music.163.com/outchain/player?type=2&id=1309359893&auto=1&height=66"></iframe>
 			</div>
 		</nav>
 	</header>		
@@ -126,29 +130,29 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="https://939682389.github.io/" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="https://github.com/939682389" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="weibo" target="_blank" href="https://weibo.com/3127334371/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="mail" target="_blank" href="/939682389@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/photos/">相册</a></li>
+					<li style="width: 33.333333333333336%"><a href="/archives/index.html">归档</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/photos/">相册</a></li>
 		        
 				</ul>
 			</nav>
@@ -163,7 +167,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-flask-nginx-uwsgi-ssl配置" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-flask-nginx-uwsgi-ssl配置" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -180,17 +184,70 @@
   	<time datetime="2019-04-05T02:30:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-05</time>
 </a>
         
+		<!-- 从这里开始添加以下内容 -->
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+		&nbsp;
+        <span class="post-meta-item-text"><i class="fas fa-camera-retro"></i>  字数统计: </span>
+        <span class="post-count">678字</span>
+      </span>
+    </span>
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">2分</span>
+      </span>
+    </span>
+	<span class="post-time">
+      &nbsp; | &nbsp;
+	  <span class="post-meta-item-icon">
+	  <i class="fa fa-eye"></i>
+	 
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	  
+	  </span>
+    </span>
+</div>
+
+          
+        <!-- 到这里结束 -->
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本文利用flask后端框架配置https域名<br>测试代码如下：<br><figure class="highlight python"><figcaption><span>hello.py</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route("/")</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"Hello World!"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    app.run(host=<span class="string">'127.0.0.1'</span>)</span><br></pre></td></tr></table></figure><br><a id="more"></a><br>搞定 Python 环境<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install python-setuptools</span><br><span class="line">$ sudo easy_install pip</span><br></pre></td></tr></table></figure></p>
-<p>这样，我们就可以通过 pip 安装 virtualenv，为 flask 项目构建虚拟环境。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pip install virtualenv</span><br></pre></td></tr></table></figure></p>
-<p>Nginx<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install nginx</span><br></pre></td></tr></table></figure></p>
-<p>保存为hello.py，运行试试，在浏览器输入服务器公网 ip 地址，加端口号5000就可以看到结果。<br>好了，现在我们用 Nginx 来承担 Web 服务。<br>删掉 Nginx 的默认配置文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo rm /etc/nginx/sites-enabled/default</span><br></pre></td></tr></table></figure></p>
-<p>有心的话，其实可以从 Nginx 默认配置中了解一些配置参数，当然最靠谱的途径还是看 Nginx 的文档。这里只简单尝试 Nginx，下面给出一个简单的配置：<br><figure class="highlight plain"><figcaption><span>hello_nginx.conf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">	listen  443;</span><br><span class="line">	server_name www.xxx.com; #公网地址</span><br><span class="line">	charset     utf-8;</span><br><span class="line">	client_max_body_size 75M;</span><br><span class="line">	ssl on;</span><br><span class="line">	ssl_certificate /etc/ssl/1251992_bangstuhelp.com.pem; #pem地址</span><br><span class="line">	ssl_certificate_key /etc/ssl/1251992_bangstuhelp.com.key; #key地址</span><br><span class="line">	ssl_session_timeout  5m;</span><br><span class="line">	ssl_protocols TLSv1 TLSv1.1 TLSv1.2; #按照这个协议配置</span><br><span class="line">	ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;</span><br><span class="line">	ssl_prefer_server_ciphers on;</span><br><span class="line">	location / &#123;</span><br><span class="line">        include      uwsgi_params;</span><br><span class="line">        uwsgi_pass   127.0.0.1:5000;  # 指向uwsgi 所应用的内部地址,所有请求将转发给uwsgi 处理</span><br><span class="line">        uwsgi_param UWSGI_PYHOME /var/www/beierzhuima/venv; # 指向虚拟环境目录</span><br><span class="line">        uwsgi_param UWSGI_CHDIR  /var/www/beierzhuima; # 指向网站根目录</span><br><span class="line">        uwsgi_param UWSGI_SCRIPT hello:app; # 指定启动程序</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>我们可以将上述内容保存为 hello_nginx.conf，稍作解释：server_name 可以是域名，也可以写 ip 地址，uwsgi_pass 是表明 Nginx 与 uwsgi 的交流方式，我这里用的是指定端口号，当然你也可以用 sock 文件的形式，具体可以看这里。将 Nginx 配置文件用软链接链接到 Nginx 配置文件夹中：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo ln -s hello_nginx.conf /etc/nginx/conf.d/ <span class="comment">#需要cd到hello_nginx.conf目录下</span></span><br></pre></td></tr></table></figure></p>
-<p>重启 Nginx：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo /etc/init.d/nginx restart</span><br></pre></td></tr></table></figure></p>
-<p>这时刷新一下之前打开的服务器公网 ip（或绑定的域名），这时看到的就不是「Welcome to Nginx」，而是「502 Bad Way」，因为我们还没有启动 uWSGI，现在我们将下面的内容保存为 hello_uwsgi.ini(用 xml 的格式也是可以的，具体可以看文档):<br><figure class="highlight plain"><figcaption><span>hello_uwsgi.ini</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">[uwsgi]</span><br><span class="line"></span><br><span class="line"># uwsgi 启动时所使用的地址与端口</span><br><span class="line">socket = 127.0.0.1:5000</span><br><span class="line"></span><br><span class="line"># 指向网站目录</span><br><span class="line">chdir = /var/www/beierzhuima/</span><br><span class="line"></span><br><span class="line"># python 启动程序文件</span><br><span class="line">wsgi-file = hello.py</span><br><span class="line"></span><br><span class="line"># python 程序内用以启动的 application 变量名</span><br><span class="line">callable = app</span><br><span class="line"></span><br><span class="line"># 处理器数</span><br><span class="line">processes = 4</span><br><span class="line"></span><br><span class="line"># 线程数</span><br><span class="line">threads = 2</span><br><span class="line"></span><br><span class="line">#状态检测地址</span><br><span class="line">stats = 127.0.0.1:9191</span><br><span class="line"></span><br><span class="line">#加上后台运行关闭shell不会断开</span><br><span class="line">daemonize = /var/www/beierzhuima/log/bezm.log</span><br></pre></td></tr></table></figure><br>通过 uwsgi 命令，–ini 参数：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ uwsgi --ini hello_uwsgi.ini</span><br></pre></td></tr></table></figure></p>
+        <p>本文利用flask后端框架配置https域名<br>测试代码如下：</p>
+<figure class="highlight python"><figcaption><span>hello.py</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route("/")</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"Hello World!"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    app.run(host=<span class="string">'127.0.0.1'</span>)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>搞定 Python 环境</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install python-setuptools</span><br><span class="line">$ sudo easy_install pip</span><br></pre></td></tr></table></figure>
+
+<p>这样，我们就可以通过 pip 安装 virtualenv，为 flask 项目构建虚拟环境。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pip install virtualenv</span><br></pre></td></tr></table></figure>
+
+<p>Nginx</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install nginx</span><br></pre></td></tr></table></figure>
+
+<p>保存为hello.py，运行试试，在浏览器输入服务器公网 ip 地址，加端口号5000就可以看到结果。<br>好了，现在我们用 Nginx 来承担 Web 服务。<br>删掉 Nginx 的默认配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo rm /etc/nginx/sites-enabled/default</span><br></pre></td></tr></table></figure>
+
+<p>有心的话，其实可以从 Nginx 默认配置中了解一些配置参数，当然最靠谱的途径还是看 Nginx 的文档。这里只简单尝试 Nginx，下面给出一个简单的配置：</p>
+<figure class="highlight plain"><figcaption><span>hello_nginx.conf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">	listen  443;</span><br><span class="line">	server_name www.xxx.com; #公网地址</span><br><span class="line">	charset     utf-8;</span><br><span class="line">	client_max_body_size 75M;</span><br><span class="line">	ssl on;</span><br><span class="line">	ssl_certificate /etc/ssl/1251992_bangstuhelp.com.pem; #pem地址</span><br><span class="line">	ssl_certificate_key /etc/ssl/1251992_bangstuhelp.com.key; #key地址</span><br><span class="line">	ssl_session_timeout  5m;</span><br><span class="line">	ssl_protocols TLSv1 TLSv1.1 TLSv1.2; #按照这个协议配置</span><br><span class="line">	ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;</span><br><span class="line">	ssl_prefer_server_ciphers on;</span><br><span class="line">	location / &#123;</span><br><span class="line">        include      uwsgi_params;</span><br><span class="line">        uwsgi_pass   127.0.0.1:5000;  # 指向uwsgi 所应用的内部地址,所有请求将转发给uwsgi 处理</span><br><span class="line">        uwsgi_param UWSGI_PYHOME /var/www/beierzhuima/venv; # 指向虚拟环境目录</span><br><span class="line">        uwsgi_param UWSGI_CHDIR  /var/www/beierzhuima; # 指向网站根目录</span><br><span class="line">        uwsgi_param UWSGI_SCRIPT hello:app; # 指定启动程序</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们可以将上述内容保存为 hello_nginx.conf，稍作解释：server_name 可以是域名，也可以写 ip 地址，uwsgi_pass 是表明 Nginx 与 uwsgi 的交流方式，我这里用的是指定端口号，当然你也可以用 sock 文件的形式，具体可以看这里。将 Nginx 配置文件用软链接链接到 Nginx 配置文件夹中：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo ln -s hello_nginx.conf /etc/nginx/conf.d/ <span class="comment">#需要cd到hello_nginx.conf目录下</span></span><br></pre></td></tr></table></figure>
+
+<p>重启 Nginx：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo /etc/init.d/nginx restart</span><br></pre></td></tr></table></figure>
+
+<p>这时刷新一下之前打开的服务器公网 ip（或绑定的域名），这时看到的就不是「Welcome to Nginx」，而是「502 Bad Way」，因为我们还没有启动 uWSGI，现在我们将下面的内容保存为 hello_uwsgi.ini(用 xml 的格式也是可以的，具体可以看文档):</p>
+<figure class="highlight plain"><figcaption><span>hello_uwsgi.ini</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">[uwsgi]</span><br><span class="line"></span><br><span class="line"># uwsgi 启动时所使用的地址与端口</span><br><span class="line">socket = 127.0.0.1:5000</span><br><span class="line"></span><br><span class="line"># 指向网站目录</span><br><span class="line">chdir = /var/www/beierzhuima/</span><br><span class="line"></span><br><span class="line"># python 启动程序文件</span><br><span class="line">wsgi-file = hello.py</span><br><span class="line"></span><br><span class="line"># python 程序内用以启动的 application 变量名</span><br><span class="line">callable = app</span><br><span class="line"></span><br><span class="line"># 处理器数</span><br><span class="line">processes = 4</span><br><span class="line"></span><br><span class="line"># 线程数</span><br><span class="line">threads = 2</span><br><span class="line"></span><br><span class="line">#状态检测地址</span><br><span class="line">stats = 127.0.0.1:9191</span><br><span class="line"></span><br><span class="line">#加上后台运行关闭shell不会断开</span><br><span class="line">daemonize = /var/www/beierzhuima/log/bezm.log</span><br></pre></td></tr></table></figure>
+<p>通过 uwsgi 命令，–ini 参数：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ uwsgi --ini hello_uwsgi.ini</span><br></pre></td></tr></table></figure>
+
 <h1 id="大功告成"><a href="#大功告成" class="headerlink" title="大功告成"></a>大功告成</h1>
       
 
@@ -253,9 +310,6 @@
 		</ul>
 	</div>
 
-	  
-	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-	  
       
 
 
@@ -375,21 +429,21 @@
   
 
   
-  <div id="SOHUCS" sid="flask-nginx-uwsgi-ssl配置"></div> 
-<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js"></script>
+  <div id="SOHUCS" sid="flask-nginx-uwsgi-ssl配置" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
         appid: "cyujFXyG6",
         conf: "8fbb1bc9f2fca7656e238936a2a94554"
     });
 </script>
-
+</script>
   
 
   <!---->
   
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="flask+nginx+uwsgi+ssl配置"></div> 
+<div id="SOHUCS" sid="flask+nginx+uwsgi+ssl配置" ></div> 
 <script type="text/javascript"> 
 (function(){ 
 var appid = 'cyujFXyG6'; 
@@ -507,14 +561,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">深度学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">边缘检测</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">flask</a>
               </li>
              
@@ -531,7 +577,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">vb</a>
+                <a href="javascript:void(0)" class="js-tag color5">深度学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">边缘检测</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -544,6 +594,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">股票</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">vb</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -567,7 +621,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:
