@@ -12,19 +12,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://www.chinazkk.cn">
-  <title>Archives: 2018 | Zkk的博客</title>
+  <title>PAD-Net: Multi-Tasks Guided Prediction-and-Distillation Network for Simultaneous Depth Estimation and Scene Parsing | Zkk的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="谢谢你来了">
-<meta name="keywords" content="Luck">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zkk的博客">
-<meta property="og:url" content="https://www.chinazkk.cn/archives/2018/index.html">
+  <meta name="description" content="该方法利用多任务预测的多个中间多模态输出作为指导，最终实现深度预测和场景分析">
+<meta name="keywords" content="深度学习,深度预测">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PAD-Net: Multi-Tasks Guided Prediction-and-Distillation Network for Simultaneous Depth Estimation and Scene Parsing">
+<meta property="og:url" content="https://www.chinazkk.cn/2019/07/15/PAD-Net-Multi-Tasks-Guided-Prediction-and-Distillation-Network-for-Simultaneous-Depth-Estimation-and-Scene-Parsing/index.html">
 <meta property="og:site_name" content="Zkk的博客">
-<meta property="og:description" content="谢谢你来了">
+<meta property="og:description" content="该方法利用多任务预测的多个中间多模态输出作为指导，最终实现深度预测和场景分析">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://www.chinazkk.cn/2019/07/15/PAD-Net-Multi-Tasks-Guided-Prediction-and-Distillation-Network-for-Simultaneous-Depth-Estimation-and-Scene-Parsing/mian.png">
+<meta property="og:image" content="https://www.chinazkk.cn/2019/07/15/PAD-Net-Multi-Tasks-Guided-Prediction-and-Distillation-Network-for-Simultaneous-Depth-Estimation-and-Scene-Parsing/detail1.png">
+<meta property="og:image" content="https://www.chinazkk.cn/2019/07/15/PAD-Net-Multi-Tasks-Guided-Prediction-and-Distillation-Network-for-Simultaneous-Depth-Estimation-and-Scene-Parsing/detail2.png">
+<meta property="og:image" content="https://www.chinazkk.cn/2019/07/15/PAD-Net-Multi-Tasks-Guided-Prediction-and-Distillation-Network-for-Simultaneous-Depth-Estimation-and-Scene-Parsing/gs1.png">
+<meta property="og:image" content="https://www.chinazkk.cn/2019/07/15/PAD-Net-Multi-Tasks-Guided-Prediction-and-Distillation-Network-for-Simultaneous-Depth-Estimation-and-Scene-Parsing/gs2.png">
+<meta property="og:image" content="https://www.chinazkk.cn/2019/07/15/PAD-Net-Multi-Tasks-Guided-Prediction-and-Distillation-Network-for-Simultaneous-Depth-Estimation-and-Scene-Parsing/gs3.png">
+<meta property="og:updated_time" content="2019-07-15T01:40:50.797Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zkk的博客">
-<meta name="twitter:description" content="谢谢你来了">
+<meta name="twitter:title" content="PAD-Net: Multi-Tasks Guided Prediction-and-Distillation Network for Simultaneous Depth Estimation and Scene Parsing">
+<meta name="twitter:description" content="该方法利用多任务预测的多个中间多模态输出作为指导，最终实现深度预测和场景分析">
+<meta name="twitter:image" content="https://www.chinazkk.cn/2019/07/15/PAD-Net-Multi-Tasks-Guided-Prediction-and-Distillation-Network-for-Simultaneous-Depth-Estimation-and-Scene-Parsing/mian.png">
   
     <link rel="alternative" href="/atom.xml" title="Zkk的博客" type="application/atom+xml">
   
@@ -170,172 +178,276 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-PAD-Net-Multi-Tasks-Guided-Prediction-and-Distillation-Network-for-Simultaneous-Depth-Estimation-and-Scene-Parsing" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      PAD-Net: Multi-Tasks Guided Prediction-and-Distillation Network for Simultaneous Depth Estimation and Scene Parsing
+    </h1>
+  
+
+
+        
+        <a href="/2019/07/15/PAD-Net-Multi-Tasks-Guided-Prediction-and-Distillation-Network-for-Simultaneous-Depth-Estimation-and-Scene-Parsing/" class="archive-article-date">
+  	<time datetime="2019-07-15T01:24:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-15</time>
+</a>
+        
+		<!-- 从这里开始添加以下内容 -->
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+		&nbsp;
+        <span class="post-meta-item-text"><i class="fas fa-camera-retro"></i>  字数统计: </span>
+        <span class="post-count">439字</span>
+      </span>
+    </span>
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">2分</span>
+      </span>
+    </span>
+	<span class="post-time">
+      &nbsp; | &nbsp;
+	  <span class="post-meta-item-icon">
+	  <i class="fa fa-eye"></i>
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	  </span>
+    </span>
+</div>
+
+          
+        <!-- 到这里结束 -->
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>该方法利用多任务预测的多个中间多模态输出作为指导，最终实现深度预测和场景分析<br><img src="/2019/07/15/PAD-Net-Multi-Tasks-Guided-Prediction-and-Distillation-Network-for-Simultaneous-Depth-Estimation-and-Scene-Parsing/mian.png" alt="main"></p>
+<a id="more"></a>
+<p>论文地址: <a href="https://arxiv.org/pdf/1805.04409.pdf" target="_blank" rel="noopener">paper</a></p>
+<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>1.多模型交互进行相互优化，设计更有效的联合损失函数<br>2.同时使用不同的损失函数学习不同的任务，使得网络优化变得复杂，泛化能力弱</p>
+<h1 id="概括"><a href="#概括" class="headerlink" title="概括"></a>概括</h1><h2 id="using-intermediate-multi-task-outputs-as-multi-modal-input-data"><a href="#using-intermediate-multi-task-outputs-as-multi-modal-input-data" class="headerlink" title="using intermediate multi-task outputs as multi-modal input data."></a>using intermediate multi-task outputs as multi-modal input data.</h2><pre><code>○ it is well-known that multi-modal data improve the performance of deep predictions.(RGB-D data better than RGB data)
+○ instead of using the output only from the target tasks, i.e. semantic and depth maps(CNN is able to predict more information related from multi-modal data)
+○ how to effectively use the multi-modal data obtained from intermediate auxiliary predictions to facilitates the final tasks is particularly important.</code></pre><h1 id="贡献"><a href="#贡献" class="headerlink" title="贡献"></a>贡献</h1><pre><code>• we propose a new multi-tasks guided predictionand-distillation network (PAD-Net) structure for simultaneous depth estimation and scene parsing.
+• we design and investigate three different multi-modal distillation modules for deep multi-modal data fusion
+• extensive experiments on the challenging NYUD-v2 and Cityscapes datasets demonstrate the effectiveness of the
+• proposed approach.</code></pre><h1 id="技术细节"><a href="#技术细节" class="headerlink" title="技术细节"></a>技术细节</h1><p><img src="/2019/07/15/PAD-Net-Multi-Tasks-Guided-Prediction-and-Distillation-Network-for-Simultaneous-Depth-Estimation-and-Scene-Parsing/detail1.png" alt="detail1"><br>ground-truth labels for scene parsing, depth estimation<br>surface normal estimation and contour prediction  directly inferred from depth and semantic labels<br><img src="/2019/07/15/PAD-Net-Multi-Tasks-Guided-Prediction-and-Distillation-Network-for-Simultaneous-Depth-Estimation-and-Scene-Parsing/detail2.png" alt="detail2"></p>
+<h2 id="Module-B"><a href="#Module-B" class="headerlink" title="Module B"></a>Module B</h2><p>对应的一层加上剩余层的卷积累加的结果作为下面网络的输入结果<br><img src="/2019/07/15/PAD-Net-Multi-Tasks-Guided-Prediction-and-Distillation-Network-for-Simultaneous-Depth-Estimation-and-Scene-Parsing/gs1.png" alt="gs1"></p>
+<h2 id="Module-C"><a href="#Module-C" class="headerlink" title="Module C"></a>Module C</h2><p><img src="/2019/07/15/PAD-Net-Multi-Tasks-Guided-Prediction-and-Distillation-Network-for-Simultaneous-Depth-Estimation-and-Scene-Parsing/gs2.png" alt="gs2"><br>利用一个引导图对每层的卷积结果进行激活<br><img src="/2019/07/15/PAD-Net-Multi-Tasks-Guided-Prediction-and-Distillation-Network-for-Simultaneous-Depth-Estimation-and-Scene-Parsing/gs3.png" alt="gs3"><br>生成的引导图对深度预测网络的输出进行引导卷积</p>
+<p>总的来说就是利用中间层生成四个辅助模板，对深度预测和语义分割进行引导。</p>
+<h1 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h1><pre><code>• NYUD-v2(795 pairs are used for training and the rest 654 for testing)560 × 425
+• Cityscapes(training, validation and test sets containing 2975, 500, and 1525 images)crop the image with size of 640</code></pre><h1 id="评价指标"><a href="#评价指标" class="headerlink" title="评价指标"></a>评价指标</h1><h2 id="depth-estimation"><a href="#depth-estimation" class="headerlink" title="depth estimation"></a>depth estimation</h2><pre><code>○ mean relative error (rel)
+○ root mean squared error (rms)
+○ mean log10 error (log10)
+○ Accuracy with threshold</code></pre><h2 id="Semantic-segmentation"><a href="#Semantic-segmentation" class="headerlink" title="Semantic segmentation"></a>Semantic segmentation</h2><pre><code>○ mean Intersection over Union (mIoU)
+○ mean accuracy
+○ pixel accuracy</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://www.xianuan.xyz/pic/zhifu%E6%94%B6%E6%AC%BE.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://www.xianuan.xyz/pic/%E6%94%B6%E6%AC%BE.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">深度学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">深度预测</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/23/jieba实例/" class="archive-article-date">
-  	<time datetime="2018-12-23T08:50:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/23/jieba实例/">jieba实例</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://www.chinazkk.cn/2019/07/15/PAD-Net-Multi-Tasks-Guided-Prediction-and-Distillation-Network-for-Simultaneous-Depth-Estimation-and-Scene-Parsing/" alt="微信分享二维码">
+    </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-          
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/15/自定义菜单menu/" class="archive-article-date">
-  	<time datetime="2018-11-15T04:54:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-15</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/07/08/Deep-Texture-and-Structure-Aware-Filtering-Network-for-Image-Smoothing/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Deep Texture and Structure Aware Filtering Network for Image Smoothing</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/15/自定义菜单menu/">自定义菜单menu</a>
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#背景"><span class="toc-number">1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#概括"><span class="toc-number">2.</span> <span class="toc-text">概括</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#using-intermediate-multi-task-outputs-as-multi-modal-input-data"><span class="toc-number">2.1.</span> <span class="toc-text">using intermediate multi-task outputs as multi-modal input data.</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#贡献"><span class="toc-number">3.</span> <span class="toc-text">贡献</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#技术细节"><span class="toc-number">4.</span> <span class="toc-text">技术细节</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Module-B"><span class="toc-number">4.1.</span> <span class="toc-text">Module B</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Module-C"><span class="toc-number">4.2.</span> <span class="toc-text">Module C</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据集"><span class="toc-number">5.</span> <span class="toc-text">数据集</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#评价指标"><span class="toc-number">6.</span> <span class="toc-text">评价指标</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#depth-estimation"><span class="toc-number">6.1.</span> <span class="toc-text">depth estimation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Semantic-segmentation"><span class="toc-number">6.2.</span> <span class="toc-text">Semantic segmentation</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/10/31/爬取全国高校/" class="archive-article-date">
-  	<time datetime="2018-10-31T05:42:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/10/31/爬取全国高校/">爬取全国高校</a>
-    </h1>
-  
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-          
 
+  
+  
+  
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/17/爬虫爬论文/" class="archive-article-date">
-  	<time datetime="2018-09-17T04:50:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-17</time>
-</a>
-        </div>
-    	 
+  <div id="SOHUCS" sid="PAD-Net-Multi-Tasks-Guided-Prediction-and-Distillation-Network-for-Simultaneous-Depth-Estimation-and-Scene-Parsing" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cyujFXyG6",
+        conf: "8fbb1bc9f2fca7656e238936a2a94554"
+    });
+</script>
+</script>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/17/爬虫爬论文/">爬虫爬论文</a>
-    </h1>
+
+  <!---->
+  
+<!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="PAD-Net: Multi-Tasks Guided Prediction-and-Distillation Network for Simultaneous Depth Estimation and Scene Parsing" ></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = 'cyujFXyG6'; 
+var conf = 'prod_6baa0fd048df42317328e8a9650dda16'; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+
   
 
 
-        <div class="article-info info-on-right">
-          
-          
+            <! -- 添加版权信息 -->
+<div class="article-footer-copyright">
+<center>本文由<b><a href="/index.html" target="_blank" title="Zkk">Zkk</a></b>创作和发表,采用<b>BY</b>-<b>NC</b>-<b>SA</b>国际许可协议进行许可</center>
 
+<center>转载请注明作者及出处,本文作者为<b><a href="/index.html" target="_blank" title="Zkk">Zkk</a></b>,本文标题为<b><a href="/2019/07/15/PAD-Net-Multi-Tasks-Guided-Prediction-and-Distillation-Network-for-Simultaneous-Depth-Estimation-and-Scene-Parsing/" target="_blank" title="PAD-Net: Multi-Tasks Guided Prediction-and-Distillation Network for Simultaneous Depth Estimation and Scene Parsing">PAD-Net: Multi-Tasks Guided Prediction-and-Distillation Network for Simultaneous Depth Estimation and Scene Parsing</a></b></center>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/03/深度学习/" class="archive-article-date">
-  	<time datetime="2018-09-03T08:00:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/03/深度学习/">深度学习</a>
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2018/page/2/">2</a><a class="page-number" href="/archives/2018/page/3/">3</a><a class="page-number" href="/archives/2018/page/4/">4</a><a class="extend next" rel="next" href="/archives/2018/page/2/">Next &raquo;</a>
-    </nav>
-  
-
+<center>本文链接为<b><a href="/2019/07/15/PAD-Net-Multi-Tasks-Guided-Prediction-and-Distillation-Network-for-Simultaneous-Depth-Estimation-and-Scene-Parsing/" target="_blank" title="PAD-Net: Multi-Tasks Guided Prediction-and-Distillation Network for Simultaneous Depth Estimation and Scene Parsing">https://www.chinazkk.cn/2019/07/15/PAD-Net-Multi-Tasks-Guided-Prediction-and-Distillation-Network-for-Simultaneous-Depth-Estimation-and-Scene-Parsing/</a></b>.</center>
+</div>
+<! -- 添加版权信息 -->
+        
 
           </div>
         </div>
@@ -362,8 +474,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
