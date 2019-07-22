@@ -22,7 +22,7 @@
 <meta property="og:site_name" content="Zkk的博客">
 <meta property="og:description" content="本篇论文CVPR2019 Oral,作者希望从低维图像边缘转移到识别属于对象(类)边界的图像像素，而且作者提出STEAL可以加入任何的语义边缘分割网络">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://www.chinazkk.cn/2019/07/22/Devil-is-in-the-Edges-Learning-Semantic-Boundaries-from-Noisy-Annotations/mian.png">
+<meta property="og:image" content="https://www.chinazkk.cn/2019/07/22/Devil-is-in-the-Edges-Learning-Semantic-Boundaries-from-Noisy-Annotations/main.png">
 <meta property="og:image" content="https://www.chinazkk.cn/2019/07/22/Devil-is-in-the-Edges-Learning-Semantic-Boundaries-from-Noisy-Annotations/net.png">
 <meta property="og:image" content="https://www.chinazkk.cn/2019/07/22/Devil-is-in-the-Edges-Learning-Semantic-Boundaries-from-Noisy-Annotations/BSE.png">
 <meta property="og:image" content="https://www.chinazkk.cn/2019/07/22/Devil-is-in-the-Edges-Learning-Semantic-Boundaries-from-Noisy-Annotations/NMS.png">
@@ -32,11 +32,11 @@
 <meta property="og:image" content="https://www.chinazkk.cn/2019/07/22/Devil-is-in-the-Edges-Learning-Semantic-Boundaries-from-Noisy-Annotations/2.png">
 <meta property="og:image" content="https://www.chinazkk.cn/2019/07/22/Devil-is-in-the-Edges-Learning-Semantic-Boundaries-from-Noisy-Annotations/3.png">
 <meta property="og:image" content="https://www.chinazkk.cn/2019/07/22/Devil-is-in-the-Edges-Learning-Semantic-Boundaries-from-Noisy-Annotations/4.png">
-<meta property="og:updated_time" content="2019-07-22T03:53:14.196Z">
+<meta property="og:updated_time" content="2019-07-22T03:56:17.093Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Devil is in the Edges: Learning Semantic Boundaries from Noisy Annotations">
 <meta name="twitter:description" content="本篇论文CVPR2019 Oral,作者希望从低维图像边缘转移到识别属于对象(类)边界的图像像素，而且作者提出STEAL可以加入任何的语义边缘分割网络">
-<meta name="twitter:image" content="https://www.chinazkk.cn/2019/07/22/Devil-is-in-the-Edges-Learning-Semantic-Boundaries-from-Noisy-Annotations/mian.png">
+<meta name="twitter:image" content="https://www.chinazkk.cn/2019/07/22/Devil-is-in-the-Edges-Learning-Semantic-Boundaries-from-Noisy-Annotations/main.png">
   
     <link rel="alternative" href="/atom.xml" title="Zkk的博客" type="application/atom+xml">
   
@@ -233,7 +233,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本篇论文CVPR2019 Oral,作者希望从低维图像边缘转移到识别属于对象(类)边界的图像像素，而且作者提出STEAL可以加入任何的语义边缘分割网络<br><img src="/2019/07/22/Devil-is-in-the-Edges-Learning-Semantic-Boundaries-from-Noisy-Annotations/mian.png" alt="main"></p>
+        <p>本篇论文CVPR2019 Oral,作者希望从低维图像边缘转移到识别属于对象(类)边界的图像像素，而且作者提出STEAL可以加入任何的语义边缘分割网络<br><img src="/2019/07/22/Devil-is-in-the-Edges-Learning-Semantic-Boundaries-from-Noisy-Annotations/main.png" alt="main"></p>
 <a id="more"></a>
 
 <p>page: <a href="https://nv-tlabs.github.io/STEAL/" target="_blank" rel="noopener">paper</a></p>
@@ -250,7 +250,7 @@
 <h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><ul>
 <li>PyTorch</li>
 <li>NVIDIA DGX Station using 4 GPUs</li>
-<li>Backbone CASENet<br>#数据集</li>
+<li>Backbone CASENet<h1 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h1></li>
 <li>SBD(contains 11355 images from the trainval set of PASCAL VOC2011, with 8498 images divided into training,  and 2857 as test.)</li>
 <li>Cityscapes(contains 5000 finely annotated images divided into 2975 training, 500 inference, and 1525 test images)</li>
 </ul>
@@ -402,7 +402,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#问题"><span class="toc-number">1.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#技术细节"><span class="toc-number">2.</span> <span class="toc-text">技术细节</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Semantic-Edge-Learning"><span class="toc-number">2.1.</span> <span class="toc-text">Semantic Edge Learning</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BSE-Loss"><span class="toc-number">2.1.1.</span> <span class="toc-text">BSE Loss</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NMS-Loss"><span class="toc-number">2.1.2.</span> <span class="toc-text">NMS Loss</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Direction-Loss"><span class="toc-number">2.1.3.</span> <span class="toc-text">Direction Loss</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Active-Alignment"><span class="toc-number">2.2.</span> <span class="toc-text">Active Alignment</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#环境"><span class="toc-number">3.</span> <span class="toc-text">环境</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#问题"><span class="toc-number">1.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#技术细节"><span class="toc-number">2.</span> <span class="toc-text">技术细节</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Semantic-Edge-Learning"><span class="toc-number">2.1.</span> <span class="toc-text">Semantic Edge Learning</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BSE-Loss"><span class="toc-number">2.1.1.</span> <span class="toc-text">BSE Loss</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NMS-Loss"><span class="toc-number">2.1.2.</span> <span class="toc-text">NMS Loss</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Direction-Loss"><span class="toc-number">2.1.3.</span> <span class="toc-text">Direction Loss</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Active-Alignment"><span class="toc-number">2.2.</span> <span class="toc-text">Active Alignment</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#环境"><span class="toc-number">3.</span> <span class="toc-text">环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据集"><span class="toc-number">4.</span> <span class="toc-text">数据集</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -554,15 +554,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">语义边缘检测</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">边缘检测</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">纹理滤波</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">语义边缘检测</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -602,15 +602,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">树莓派</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
               </li>
              
               <li class="article-tag-list-item">
