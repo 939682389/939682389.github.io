@@ -172,6 +172,101 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-微信定时发送源码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/06/微信定时发送源码/">微信定时发送源码</a>
+    </h1>
+  
+
+
+        
+        <a href="/2018/08/06/微信定时发送源码/" class="archive-article-date">
+  	<time datetime="2018-08-06T10:51:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
+</a>
+        
+		<!-- 从这里开始添加以下内容 -->
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+		&nbsp;
+        <span class="post-meta-item-text"><i class="fas fa-camera-retro"></i>  字数统计: </span>
+        <span class="post-count">110字</span>
+      </span>
+    </span>
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1分</span>
+      </span>
+    </span>
+	<span class="post-time">
+      &nbsp; | &nbsp;
+	  <span class="post-meta-item-icon">
+	  <i class="fa fa-eye"></i>
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	  </span>
+    </span>
+</div>
+
+          
+        <!-- 到这里结束 -->
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:gbk -*-</span></span><br><span class="line"><span class="comment"># 导入模块</span></span><br><span class="line">from wxpy import *</span><br><span class="line">import time</span><br><span class="line">import random</span><br><span class="line"></span><br><span class="line">bot = Bot()</span><br><span class="line"><span class="comment"># 初始化机器人，扫码登陆</span></span><br><span class="line"></span><br><span class="line">def send_news():</span><br><span class="line">  data=[]</span><br><span class="line">  data.append(<span class="string">'xxx'</span>)</span><br><span class="line"></span><br><span class="line">  n=0</span><br><span class="line">  <span class="keyword">while</span> 1:</span><br><span class="line">    try:</span><br><span class="line">        </span><br><span class="line">        my_friend = bot.friends().search(u<span class="string">'Zkk'</span>)[0]    <span class="comment">#你朋友的微信名称，不是备注，也不是微信帐号。</span></span><br><span class="line">        </span><br><span class="line">        my_friend.send(data[n])</span><br><span class="line">        n+=1</span><br><span class="line">        <span class="keyword">if</span> n==len(data):</span><br><span class="line">           <span class="built_in">return</span></span><br><span class="line">        time.sleep(480)</span><br><span class="line">    except:</span><br><span class="line">        my_friend = bot.friends().search(<span class="string">'Zkk'</span>)[0]<span class="comment">#你的微信名称，不是微信帐号。</span></span><br><span class="line">        my_friend.send(u<span class="string">"今天消息发送失败了"</span>)</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    send_news()</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/06/微信定时发送源码/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
     <article id="post-图像透视" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1177,6 +1272,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">语义边缘检测</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">边缘检测</a>
               </li>
              
@@ -1221,15 +1320,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">树莓派</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
               </li>
              
               <li class="article-tag-list-item">
