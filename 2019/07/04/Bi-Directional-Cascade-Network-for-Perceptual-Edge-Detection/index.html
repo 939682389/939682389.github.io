@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://www.chinazkk.cn/2019/07/04/Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection/ys.jpg">
 <meta property="og:image" content="https://www.chinazkk.cn/2019/07/04/Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection/ysd.jpg">
 <meta property="og:image" content="https://www.chinazkk.cn/2019/07/04/Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection/loss.jpg">
-<meta property="og:updated_time" content="2019-07-06T12:01:49.875Z">
+<meta property="og:updated_time" content="2019-08-07T01:49:24.958Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Bi-Directional Cascade Network for Perceptual Edge Detection">
 <meta name="twitter:description" content="该论文是一篇CVPR2019，本文主要是利用双向网络解决边缘检测问题，效果图如下：">
@@ -205,7 +205,7 @@
         <i class="fa fa-keyboard-o"></i>
 		&nbsp;
         <span class="post-meta-item-text"><i class="fas fa-camera-retro"></i>  字数统计: </span>
-        <span class="post-count">418字</span>
+        <span class="post-count">517字</span>
       </span>
     </span>
     <span class="post-time">
@@ -240,7 +240,7 @@
 <h1 id="本文的方法"><a href="#本文的方法" class="headerlink" title="本文的方法"></a>本文的方法</h1><p><img src="/2019/07/04/Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection/thisway.jpg" alt="BDCN"><br>从不同卷积层学习边缘信息</p>
 <h2 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h2><p><img src="/2019/07/04/Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection/flow1.jpg" alt="flow1"></p>
 <p><img src="/2019/07/04/Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection/flow2.jpg" alt="flow2"></p>
-<h1 id="技术细节"><a href="#技术细节" class="headerlink" title="技术细节"></a>技术细节</h1><h2 id="参数介绍"><a href="#参数介绍" class="headerlink" title="参数介绍"></a>参数介绍</h2><p><img src="/2019/07/04/Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection/x_y.jpg" alt="x_y"><br>X:输入图<br>Y:ground−truth<br><img src="/2019/07/04/Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection/ys.jpg" alt="ys"><br>因为单一的分离图层很难求出，所以本文换了个思路。Ys等于Y层减去其他层求得的结果<br><img src="/2019/07/04/Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection/ysd.jpg" alt="ysd"><br>所以最终作者采用两个方向进行传播，一种是由浅到深，一种是由深到浅的图层进行累加，获得每层的结果。但是Y结合了预测值，有点迷。</p>
+<h1 id="技术细节"><a href="#技术细节" class="headerlink" title="技术细节"></a>技术细节</h1><h2 id="参数介绍"><a href="#参数介绍" class="headerlink" title="参数介绍"></a>参数介绍</h2><p><img src="/2019/07/04/Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection/x_y.jpg" alt="x_y"><br>X:输入图<br>Y:ground−truth<br><img src="/2019/07/04/Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection/ys.jpg" alt="ys"><br>因为BSD数据集每幅图由五个标注信息，作者规定Ys等于Y层减去其他层求得的结果<br><img src="/2019/07/04/Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection/ysd.jpg" alt="ysd"><br>所以最终作者采用两个方向进行传播，一种是由浅到深，一种是由深到浅的图层进行累加，获得每层的结果。但是Y结合了预测值。</p>
 <h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><p><img src="/2019/07/04/Bi-Directional-Cascade-Network-for-Perceptual-Edge-Detection/loss.jpg" alt="loss"></p>
 <h1 id="创新"><a href="#创新" class="headerlink" title="创新"></a>创新</h1><h2 id="1-ID-Block"><a href="#1-ID-Block" class="headerlink" title="1.ID Block"></a>1.ID Block</h2><p>每个ID Block由两个边缘检测器(edge detector)，分别对由深到浅和由浅到深的卷积层进行监督。</p>
 <h2 id="2-Scale-Enhancement-Module-SEM"><a href="#2-Scale-Enhancement-Module-SEM" class="headerlink" title="2.Scale Enhancement Module(SEM)"></a>2.Scale Enhancement Module(SEM)</h2><p>利用SEM对输入图像进行卷积膨胀，从而扩大感受野(receptive field)</p>
@@ -250,7 +250,14 @@
 • VGG16 [44] pretrained on ImageNet 
 • NVIDIA GeForce1080Ti GPU </code></pre><h1 id="评价指标"><a href="#评价指标" class="headerlink" title="评价指标"></a>评价指标</h1><pre><code>• Average Precision (AP),
 • as well as F-measure at both Optimal Dataset Scale (ODS)
-• and Optimal Image Scale (OIS) </code></pre>
+• and Optimal Image Scale (OIS) </code></pre><h1 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h1><h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ul>
+<li>作者用SEM,即膨胀卷积扩大了感受野</li>
+<li>结合深层到浅层以及浅层到深层信息,充分融合以获得更好的融合效果<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2></li>
+<li>边缘过于粗糙,可能是上采样以及标注不够准确造成的</li>
+<li>结果存在细节丢失的现象</li>
+<li>D2S的信息都为较粗信息,对网络的作用不是很大</li>
+</ul>
+
       
 
       
@@ -407,7 +414,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#链接"><span class="toc-number">1.</span> <span class="toc-text">链接</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#背景"><span class="toc-number">2.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#算法现状"><span class="toc-number">3.</span> <span class="toc-text">算法现状</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#hierarchal-features"><span class="toc-number">3.1.</span> <span class="toc-text">hierarchal features</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Image-pyramid-and-fuse-multi-level-features"><span class="toc-number">3.2.</span> <span class="toc-text">Image pyramid and fuse multi-level features</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#本文的方法"><span class="toc-number">4.</span> <span class="toc-text">本文的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#流程图"><span class="toc-number">4.1.</span> <span class="toc-text">流程图</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#技术细节"><span class="toc-number">5.</span> <span class="toc-text">技术细节</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#参数介绍"><span class="toc-number">5.1.</span> <span class="toc-text">参数介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#损失函数"><span class="toc-number">5.2.</span> <span class="toc-text">损失函数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#创新"><span class="toc-number">6.</span> <span class="toc-text">创新</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-ID-Block"><span class="toc-number">6.1.</span> <span class="toc-text">1.ID Block</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Scale-Enhancement-Module-SEM"><span class="toc-number">6.2.</span> <span class="toc-text">2.Scale Enhancement Module(SEM)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据集"><span class="toc-number">7.</span> <span class="toc-text">数据集</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#环境"><span class="toc-number">8.</span> <span class="toc-text">环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#评价指标"><span class="toc-number">9.</span> <span class="toc-text">评价指标</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#链接"><span class="toc-number">1.</span> <span class="toc-text">链接</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#背景"><span class="toc-number">2.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#算法现状"><span class="toc-number">3.</span> <span class="toc-text">算法现状</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#hierarchal-features"><span class="toc-number">3.1.</span> <span class="toc-text">hierarchal features</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Image-pyramid-and-fuse-multi-level-features"><span class="toc-number">3.2.</span> <span class="toc-text">Image pyramid and fuse multi-level features</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#本文的方法"><span class="toc-number">4.</span> <span class="toc-text">本文的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#流程图"><span class="toc-number">4.1.</span> <span class="toc-text">流程图</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#技术细节"><span class="toc-number">5.</span> <span class="toc-text">技术细节</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#参数介绍"><span class="toc-number">5.1.</span> <span class="toc-text">参数介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#损失函数"><span class="toc-number">5.2.</span> <span class="toc-text">损失函数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#创新"><span class="toc-number">6.</span> <span class="toc-text">创新</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-ID-Block"><span class="toc-number">6.1.</span> <span class="toc-text">1.ID Block</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Scale-Enhancement-Module-SEM"><span class="toc-number">6.2.</span> <span class="toc-text">2.Scale Enhancement Module(SEM)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据集"><span class="toc-number">7.</span> <span class="toc-text">数据集</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#环境"><span class="toc-number">8.</span> <span class="toc-text">环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#评价指标"><span class="toc-number">9.</span> <span class="toc-text">评价指标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#思考"><span class="toc-number">10.</span> <span class="toc-text">思考</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#优点"><span class="toc-number">10.1.</span> <span class="toc-text">优点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#缺点"><span class="toc-number">10.2.</span> <span class="toc-text">缺点</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -559,6 +566,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">边缘检测</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">纹理滤波</a>
               </li>
              
@@ -567,11 +578,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">边缘检测</a>
+                <a href="javascript:void(0)" class="js-tag color5">深度预测</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">深度预测</a>
+                <a href="javascript:void(0)" class="js-tag color3">vb</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -588,10 +599,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">ssl配置</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">vb</a>
               </li>
              
               <li class="article-tag-list-item">

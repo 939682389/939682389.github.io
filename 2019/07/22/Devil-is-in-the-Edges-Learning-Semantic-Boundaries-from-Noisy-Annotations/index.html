@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://www.chinazkk.cn/2019/07/22/Devil-is-in-the-Edges-Learning-Semantic-Boundaries-from-Noisy-Annotations/2.png">
 <meta property="og:image" content="https://www.chinazkk.cn/2019/07/22/Devil-is-in-the-Edges-Learning-Semantic-Boundaries-from-Noisy-Annotations/3.png">
 <meta property="og:image" content="https://www.chinazkk.cn/2019/07/22/Devil-is-in-the-Edges-Learning-Semantic-Boundaries-from-Noisy-Annotations/4.png">
-<meta property="og:updated_time" content="2019-07-22T03:56:17.093Z">
+<meta property="og:updated_time" content="2019-08-07T01:52:23.327Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Devil is in the Edges: Learning Semantic Boundaries from Noisy Annotations">
 <meta name="twitter:description" content="本篇论文CVPR2019 Oral,作者希望从低维图像边缘转移到识别属于对象(类)边界的图像像素，而且作者提出STEAL可以加入任何的语义边缘分割网络">
@@ -207,7 +207,7 @@
         <i class="fa fa-keyboard-o"></i>
 		&nbsp;
         <span class="post-meta-item-text"><i class="fas fa-camera-retro"></i>  字数统计: </span>
-        <span class="post-count">274字</span>
+        <span class="post-count">308字</span>
       </span>
     </span>
     <span class="post-time">
@@ -253,6 +253,10 @@
 <li>Backbone CASENet<h1 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h1></li>
 <li>SBD(contains 11355 images from the trainval set of PASCAL VOC2011, with 8498 images divided into training,  and 2857 as test.)</li>
 <li>Cityscapes(contains 5000 finely annotated images divided into 2975 training, 500 inference, and 1525 test images)</li>
+</ul>
+<h1 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h1><h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ul>
+<li>提出了NMS Loss对于边缘细化有一定的作用<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2></li>
+<li>Active Alignment不会有太高的准确率</li>
 </ul>
 
       
@@ -411,7 +415,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#问题"><span class="toc-number">1.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#技术细节"><span class="toc-number">2.</span> <span class="toc-text">技术细节</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Semantic-Edge-Learning"><span class="toc-number">2.1.</span> <span class="toc-text">Semantic Edge Learning</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BSE-Loss"><span class="toc-number">2.1.1.</span> <span class="toc-text">BSE Loss</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NMS-Loss"><span class="toc-number">2.1.2.</span> <span class="toc-text">NMS Loss</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Direction-Loss"><span class="toc-number">2.1.3.</span> <span class="toc-text">Direction Loss</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Active-Alignment"><span class="toc-number">2.2.</span> <span class="toc-text">Active Alignment</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#环境"><span class="toc-number">3.</span> <span class="toc-text">环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据集"><span class="toc-number">4.</span> <span class="toc-text">数据集</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#问题"><span class="toc-number">1.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#技术细节"><span class="toc-number">2.</span> <span class="toc-text">技术细节</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Semantic-Edge-Learning"><span class="toc-number">2.1.</span> <span class="toc-text">Semantic Edge Learning</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BSE-Loss"><span class="toc-number">2.1.1.</span> <span class="toc-text">BSE Loss</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NMS-Loss"><span class="toc-number">2.1.2.</span> <span class="toc-text">NMS Loss</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Direction-Loss"><span class="toc-number">2.1.3.</span> <span class="toc-text">Direction Loss</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Active-Alignment"><span class="toc-number">2.2.</span> <span class="toc-text">Active Alignment</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#环境"><span class="toc-number">3.</span> <span class="toc-text">环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据集"><span class="toc-number">4.</span> <span class="toc-text">数据集</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#思考"><span class="toc-number">5.</span> <span class="toc-text">思考</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#优点"><span class="toc-number">5.1.</span> <span class="toc-text">优点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#缺点"><span class="toc-number">5.2.</span> <span class="toc-text">缺点</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -563,6 +567,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">边缘检测</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">纹理滤波</a>
               </li>
              
@@ -571,11 +579,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">边缘检测</a>
+                <a href="javascript:void(0)" class="js-tag color5">深度预测</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">深度预测</a>
+                <a href="javascript:void(0)" class="js-tag color3">vb</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -592,10 +600,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">ssl配置</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">vb</a>
               </li>
              
               <li class="article-tag-list-item">

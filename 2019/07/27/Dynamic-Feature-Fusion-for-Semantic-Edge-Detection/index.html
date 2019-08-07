@@ -29,7 +29,7 @@
 <meta property="og:image" content="https://www.chinazkk.cn/2019/07/27/Dynamic-Feature-Fusion-for-Semantic-Edge-Detection/gs2.png">
 <meta property="og:image" content="https://www.chinazkk.cn/2019/07/27/Dynamic-Feature-Fusion-for-Semantic-Edge-Detection/softmax.png">
 <meta property="og:image" content="https://www.chinazkk.cn/2019/07/27/Dynamic-Feature-Fusion-for-Semantic-Edge-Detection/res.png">
-<meta property="og:updated_time" content="2019-07-27T08:23:08.249Z">
+<meta property="og:updated_time" content="2019-08-07T01:54:41.388Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dynamic Feature Fusion for Semantic Edge Detection">
 <meta name="twitter:description" content="这是一篇CVPR2019的论文，在最终的多层融合中，传统方法采用了固定权重，作者提出自适应权重的方法。">
@@ -204,7 +204,7 @@
         <i class="fa fa-keyboard-o"></i>
 		&nbsp;
         <span class="post-meta-item-text"><i class="fas fa-camera-retro"></i>  字数统计: </span>
-        <span class="post-count">173字</span>
+        <span class="post-count">229字</span>
       </span>
     </span>
     <span class="post-time">
@@ -252,6 +252,11 @@
 <li>random cropping(0.5; 0.75; 1; 1.25; 1.5)</li>
 </ul>
 <h1 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h1><p><img src="/2019/07/27/Dynamic-Feature-Fusion-for-Semantic-Edge-Detection/res.png" alt="res"><br>这个结果应该是在同期的STEAL高</p>
+<h1 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h1><h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ul>
+<li>首先提出自适应权重的概念</li>
+<li>对不同维度特征进行归一化,利于权重的融合<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2></li>
+<li>自适应权重仅采用最后一层的信息,不太合理</li>
+</ul>
 
       
 
@@ -400,7 +405,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#背景"><span class="toc-number">1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#问题"><span class="toc-number">2.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#技术细节"><span class="toc-number">3.</span> <span class="toc-text">技术细节</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#融合权重"><span class="toc-number">3.1.</span> <span class="toc-text">融合权重</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#location-invariant-weight-learner"><span class="toc-number">3.1.1.</span> <span class="toc-text">location-invariant weight learner</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Location-adaptive-weight-learner"><span class="toc-number">3.1.2.</span> <span class="toc-text">Location-adaptive weight learner</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据集及其增广"><span class="toc-number">4.</span> <span class="toc-text">数据集及其增广</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Dataset"><span class="toc-number">4.1.</span> <span class="toc-text">Dataset</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Augmentation"><span class="toc-number">4.2.</span> <span class="toc-text">Augmentation</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#结果"><span class="toc-number">5.</span> <span class="toc-text">结果</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#背景"><span class="toc-number">1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#问题"><span class="toc-number">2.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#技术细节"><span class="toc-number">3.</span> <span class="toc-text">技术细节</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#融合权重"><span class="toc-number">3.1.</span> <span class="toc-text">融合权重</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#location-invariant-weight-learner"><span class="toc-number">3.1.1.</span> <span class="toc-text">location-invariant weight learner</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Location-adaptive-weight-learner"><span class="toc-number">3.1.2.</span> <span class="toc-text">Location-adaptive weight learner</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据集及其增广"><span class="toc-number">4.</span> <span class="toc-text">数据集及其增广</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Dataset"><span class="toc-number">4.1.</span> <span class="toc-text">Dataset</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Augmentation"><span class="toc-number">4.2.</span> <span class="toc-text">Augmentation</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#结果"><span class="toc-number">5.</span> <span class="toc-text">结果</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#思考"><span class="toc-number">6.</span> <span class="toc-text">思考</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#优点"><span class="toc-number">6.1.</span> <span class="toc-text">优点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#缺点"><span class="toc-number">6.2.</span> <span class="toc-text">缺点</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -552,6 +557,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">边缘检测</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">纹理滤波</a>
               </li>
              
@@ -560,11 +569,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">边缘检测</a>
+                <a href="javascript:void(0)" class="js-tag color5">深度预测</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">深度预测</a>
+                <a href="javascript:void(0)" class="js-tag color3">vb</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -581,10 +590,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">ssl配置</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">vb</a>
               </li>
              
               <li class="article-tag-list-item">
