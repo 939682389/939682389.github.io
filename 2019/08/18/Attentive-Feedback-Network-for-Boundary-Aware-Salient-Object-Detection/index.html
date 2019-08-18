@@ -12,19 +12,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://www.chinazkk.cn">
-  <title>Tag: html | Zkk的博客</title>
+  <title>Attentive Feedback Network for Boundary-Aware Salient Object Detection | Zkk的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="谢谢你来了">
-<meta name="keywords" content="Luck">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zkk的博客">
-<meta property="og:url" content="https://www.chinazkk.cn/tags/html/index.html">
+  <meta name="description" content="这是一篇CVPR2019的ORAL，主要是通过改进的沙漏网络进行显著性目标检测。">
+<meta name="keywords" content="深度学习,显著性目标检测">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Attentive Feedback Network for Boundary-Aware Salient Object Detection">
+<meta property="og:url" content="https://www.chinazkk.cn/2019/08/18/Attentive-Feedback-Network-for-Boundary-Aware-Salient-Object-Detection/index.html">
 <meta property="og:site_name" content="Zkk的博客">
-<meta property="og:description" content="谢谢你来了">
+<meta property="og:description" content="这是一篇CVPR2019的ORAL，主要是通过改进的沙漏网络进行显著性目标检测。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://www.chinazkk.cn/2019/08/18/Attentive-Feedback-Network-for-Boundary-Aware-Salient-Object-Detection/main.png">
+<meta property="og:image" content="https://www.chinazkk.cn/2019/08/18/Attentive-Feedback-Network-for-Boundary-Aware-Salient-Object-Detection/network.png">
+<meta property="og:image" content="https://www.chinazkk.cn/2019/08/18/Attentive-Feedback-Network-for-Boundary-Aware-Salient-Object-Detection/GPM.png">
+<meta property="og:image" content="https://www.chinazkk.cn/2019/08/18/Attentive-Feedback-Network-for-Boundary-Aware-Salient-Object-Detection/LOSS.png">
+<meta property="og:updated_time" content="2019-08-18T15:26:02.140Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zkk的博客">
-<meta name="twitter:description" content="谢谢你来了">
+<meta name="twitter:title" content="Attentive Feedback Network for Boundary-Aware Salient Object Detection">
+<meta name="twitter:description" content="这是一篇CVPR2019的ORAL，主要是通过改进的沙漏网络进行显著性目标检测。">
+<meta name="twitter:image" content="https://www.chinazkk.cn/2019/08/18/Attentive-Feedback-Network-for-Boundary-Aware-Salient-Object-Detection/main.png">
   
     <link rel="alternative" href="/atom.xml" title="Zkk的博客" type="application/atom+xml">
   
@@ -170,63 +176,280 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Attentive-Feedback-Network-for-Boundary-Aware-Salient-Object-Detection" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/04/网页抽签器/" class="archive-article-date">
-  	<time datetime="2019-05-04T07:29:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-04</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/04/网页抽签器/">网页抽签器</a>
+    <h1 class="article-title" itemprop="name">
+      Attentive Feedback Network for Boundary-Aware Salient Object Detection
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+        
+        <a href="/2019/08/18/Attentive-Feedback-Network-for-Boundary-Aware-Salient-Object-Detection/" class="archive-article-date">
+  	<time datetime="2019-08-18T15:17:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-18</time>
+</a>
+        
+		<!-- 从这里开始添加以下内容 -->
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+		&nbsp;
+        <span class="post-meta-item-text"><i class="fas fa-camera-retro"></i>  字数统计: </span>
+        <span class="post-count">375字</span>
+      </span>
+    </span>
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1分</span>
+      </span>
+    </span>
+	<span class="post-time">
+      &nbsp; | &nbsp;
+	  <span class="post-meta-item-icon">
+	  <i class="fa fa-eye"></i>
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	  </span>
+    </span>
+</div>
+
           
+        <!-- 到这里结束 -->
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这是一篇CVPR2019的ORAL，主要是通过改进的沙漏网络进行显著性目标检测。<br><img src="/2019/08/18/Attentive-Feedback-Network-for-Boundary-Aware-Salient-Object-Detection/main.png" alt="main"></p>
+<a id="more"></a>
+<p>code: <a href="http://t.cn/EIf2Ybf" target="_blank" rel="noopener">code</a></p>
+<h1 id="Qusetion"><a href="#Qusetion" class="headerlink" title="Qusetion"></a>Qusetion</h1><p>Pooling 以及 stride 会导致空间信息的丢失</p>
+<h1 id="Contribution"><a href="#Contribution" class="headerlink" title="Contribution"></a>Contribution</h1><h2 id="Attentive-Feedback-Network-AFNet"><a href="#Attentive-Feedback-Network-AFNet" class="headerlink" title="Attentive Feedback Network (AFNet)"></a>Attentive Feedback Network (AFNet)</h2><p>为了应对saliency detection中的边缘检测挑战。skip-connections between scalematching encoder and decoder blocks，作者认为如果没有合适的引导，粗的信息将会误导细的。</p>
+<h2 id="Boundary-Enhanced-Loss-BEL"><a href="#Boundary-Enhanced-Loss-BEL" class="headerlink" title="Boundary-Enhanced Loss (BEL)"></a>Boundary-Enhanced Loss (BEL)</h2><p>为了约束 the boundaries of the salient object</p>
+<h1 id="Detail"><a href="#Detail" class="headerlink" title="Detail"></a>Detail</h1><p><img src="/2019/08/18/Attentive-Feedback-Network-for-Boundary-Aware-Salient-Object-Detection/network.png" alt="network"><br>作者采用VGG-16作为backbone，在E5使用rate=2的dilated convolutions为了维持原本的感受野</p>
+<h2 id="Decoder-Network"><a href="#Decoder-Network" class="headerlink" title="Decoder Network"></a>Decoder Network</h2><p>每个解码网络生成两张 saliency map，D1和D2添加 Boundary-Enhanced Loss</p>
+<h2 id="GPM"><a href="#GPM" class="headerlink" title="GPM"></a>GPM</h2><p><img src="/2019/08/18/Attentive-Feedback-Network-for-Boundary-Aware-Salient-Object-Detection/GPM.png" alt="GPM"><br>作者把原始的特征层划分成几块堆叠，最后通过卷积获得新的特征层，恢复成原始的特征层尺寸</p>
+<h2 id="AFM"><a href="#AFM" class="headerlink" title="AFM"></a>AFM</h2><p>因为前面一层的识别错误将导致最终结果的错误。把编码层的和前一层解码层的经过腐蚀膨胀操作的特征层堆叠进行卷积，S_,1代表没有经过腐蚀膨胀操作的结果图，S_,2表示经过腐蚀膨胀操作后的卷积结果</p>
+<h2 id="Loss"><a href="#Loss" class="headerlink" title="Loss"></a>Loss</h2><h3 id="Cross-entropy-Loss"><a href="#Cross-entropy-Loss" class="headerlink" title="Cross-entropy Loss"></a>Cross-entropy Loss</h3><h3 id="boundary-enhanced-Loss"><a href="#boundary-enhanced-Loss" class="headerlink" title="boundary-enhanced Loss"></a>boundary-enhanced Loss</h3><p><img src="/2019/08/18/Attentive-Feedback-Network-for-Boundary-Aware-Salient-Object-Detection/LOSS.png" alt="LOSS"><br>X表示mask 对X做一个均值滤波，做差得到的便是边缘图<br>boundary-enhanced Loss就是Euclidean loss</p>
+<h1 id="Datasets"><a href="#Datasets" class="headerlink" title="Datasets"></a>Datasets</h1><ul>
+<li>ECSSD</li>
+<li>PASCAL-S</li>
+<li>DUT-OMRON</li>
+<li>HKU-IS</li>
+<li>DUTS</li>
+</ul>
+<h1 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h1><h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ul>
+<li>利用了腐蚀膨胀使网络结果更准确</li>
+<li>增加变换信息优化了显著性目标检测边缘质量<h2 id="不足"><a href="#不足" class="headerlink" title="不足"></a>不足</h2></li>
+<li>Boundary-Enhanced Loss 设计并不是很科学</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://www.xianuan.xyz/pic/zhifu%E6%94%B6%E6%AC%BE.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://www.xianuan.xyz/pic/%E6%94%B6%E6%AC%BE.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">深度学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">显著性目标检测</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://www.chinazkk.cn/2019/08/18/Attentive-Feedback-Network-for-Boundary-Aware-Salient-Object-Detection/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/08/09/Deformable-ConvNets-v2-More-Deformable-Better-Results/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Deformable ConvNets v2: More Deformable, Better Results</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Qusetion"><span class="toc-number">1.</span> <span class="toc-text">Qusetion</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Contribution"><span class="toc-number">2.</span> <span class="toc-text">Contribution</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Attentive-Feedback-Network-AFNet"><span class="toc-number">2.1.</span> <span class="toc-text">Attentive Feedback Network (AFNet)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Boundary-Enhanced-Loss-BEL"><span class="toc-number">2.2.</span> <span class="toc-text">Boundary-Enhanced Loss (BEL)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Detail"><span class="toc-number">3.</span> <span class="toc-text">Detail</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Decoder-Network"><span class="toc-number">3.1.</span> <span class="toc-text">Decoder Network</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GPM"><span class="toc-number">3.2.</span> <span class="toc-text">GPM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AFM"><span class="toc-number">3.3.</span> <span class="toc-text">AFM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Loss"><span class="toc-number">3.4.</span> <span class="toc-text">Loss</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Cross-entropy-Loss"><span class="toc-number">3.4.1.</span> <span class="toc-text">Cross-entropy Loss</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#boundary-enhanced-Loss"><span class="toc-number">3.4.2.</span> <span class="toc-text">boundary-enhanced Loss</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Datasets"><span class="toc-number">4.</span> <span class="toc-text">Datasets</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#思考"><span class="toc-number">5.</span> <span class="toc-text">思考</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#优点"><span class="toc-number">5.1.</span> <span class="toc-text">优点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不足"><span class="toc-number">5.2.</span> <span class="toc-text">不足</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+  <div id="SOHUCS" sid="Attentive-Feedback-Network-for-Boundary-Aware-Salient-Object-Detection" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cyujFXyG6",
+        conf: "8fbb1bc9f2fca7656e238936a2a94554"
+    });
+</script>
+</script>
+  
 
+  <!---->
+  
+<!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="Attentive Feedback Network for Boundary-Aware Salient Object Detection" ></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = 'cyujFXyG6'; 
+var conf = 'prod_6baa0fd048df42317328e8a9650dda16'; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+
+  
+
+
+            <! -- 添加版权信息 -->
+<div class="article-footer-copyright">
+<center>本文由<b><a href="/index.html" target="_blank" title="Zkk">Zkk</a></b>创作和发表,采用<b>BY</b>-<b>NC</b>-<b>SA</b>国际许可协议进行许可</center>
+
+<center>转载请注明作者及出处,本文作者为<b><a href="/index.html" target="_blank" title="Zkk">Zkk</a></b>,本文标题为<b><a href="/2019/08/18/Attentive-Feedback-Network-for-Boundary-Aware-Salient-Object-Detection/" target="_blank" title="Attentive Feedback Network for Boundary-Aware Salient Object Detection">Attentive Feedback Network for Boundary-Aware Salient Object Detection</a></b></center>
+
+<center>本文链接为<b><a href="/2019/08/18/Attentive-Feedback-Network-for-Boundary-Aware-Salient-Object-Detection/" target="_blank" title="Attentive Feedback Network for Boundary-Aware Salient Object Detection">https://www.chinazkk.cn/2019/08/18/Attentive-Feedback-Network-for-Boundary-Aware-Salient-Object-Detection/</a></b>.</center>
+</div>
+<! -- 添加版权信息 -->
+        
 
           </div>
         </div>
@@ -253,9 +476,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
