@@ -23,13 +23,14 @@
 <meta property="og:description" content="本文来自CVPR2019，提出了一种性能超过传统depthwise separable convolution的算法，利用了特征图偏移的思想进行改造。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://www.chinazkk.cn/2019/08/28/All-You-Need-is-a-Few-Shifts-Designing-Efficient-Convolutional-Neural-Networks-for-Image-Classification/main.png">
+<meta property="og:image" content="https://www.chinazkk.cn/2019/08/28/All-You-Need-is-a-Few-Shifts-Designing-Efficient-Convolutional-Neural-Networks-for-Image-Classification/network.png">
 <meta property="og:image" content="https://www.chinazkk.cn/2019/08/28/All-You-Need-is-a-Few-Shifts-Designing-Efficient-Convolutional-Neural-Networks-for-Image-Classification/FN.png">
 <meta property="og:image" content="https://www.chinazkk.cn/2019/08/28/All-You-Need-is-a-Few-Shifts-Designing-Efficient-Convolutional-Neural-Networks-for-Image-Classification/FEBLOCK.png">
 <meta property="og:image" content="https://www.chinazkk.cn/2019/08/28/All-You-Need-is-a-Few-Shifts-Designing-Efficient-Convolutional-Neural-Networks-for-Image-Classification/SLL.png">
 <meta property="og:image" content="https://www.chinazkk.cn/2019/08/28/All-You-Need-is-a-Few-Shifts-Designing-Efficient-Convolutional-Neural-Networks-for-Image-Classification/LOSS.png">
 <meta property="og:image" content="https://www.chinazkk.cn/2019/08/28/All-You-Need-is-a-Few-Shifts-Designing-Efficient-Convolutional-Neural-Networks-for-Image-Classification/SL.png">
 <meta property="og:image" content="https://www.chinazkk.cn/2019/08/28/All-You-Need-is-a-Few-Shifts-Designing-Efficient-Convolutional-Neural-Networks-for-Image-Classification/RES.png">
-<meta property="og:updated_time" content="2019-08-28T12:40:53.856Z">
+<meta property="og:updated_time" content="2019-08-28T12:43:37.150Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="All You Need is a Few Shifts: Designing Efficient Convolutional Neural Networks for Image Classification">
 <meta name="twitter:description" content="本文来自CVPR2019，提出了一种性能超过传统depthwise separable convolution的算法，利用了特征图偏移的思想进行改造。">
@@ -204,7 +205,7 @@
         <i class="fa fa-keyboard-o"></i>
 		&nbsp;
         <span class="post-meta-item-text"><i class="fas fa-camera-retro"></i>  字数统计: </span>
-        <span class="post-count">353字</span>
+        <span class="post-count">365字</span>
       </span>
     </span>
     <span class="post-time">
@@ -238,7 +239,8 @@
 <li>A quantization-aware shift learning method</li>
 <li>achieve stateof-the-art results in classification benchmarks in terms of both accuracy and inference speed</li>
 </ul>
-<h1 id="Detail"><a href="#Detail" class="headerlink" title="Detail"></a>Detail</h1><h2 id="Displacement-penalty"><a href="#Displacement-penalty" class="headerlink" title="Displacement penalty"></a>Displacement penalty</h2><p>为了避免内存的浪费</p>
+<h1 id="Detail"><a href="#Detail" class="headerlink" title="Detail"></a>Detail</h1><p><img src="/2019/08/28/All-You-Need-is-a-Few-Shifts-Designing-Efficient-Convolutional-Neural-Networks-for-Image-Classification/network.png" alt="network"><br>上图是整个网络的结构表</p>
+<h2 id="Displacement-penalty"><a href="#Displacement-penalty" class="headerlink" title="Displacement penalty"></a>Displacement penalty</h2><p>为了避免内存的浪费</p>
 <h2 id="Fully-Exploited-Network-FE-Net"><a href="#Fully-Exploited-Network-FE-Net" class="headerlink" title="Fully-Exploited Network (FE-Net)"></a>Fully-Exploited Network (FE-Net)</h2><p>网络通常不能全被利用，特征图通常可以分成不同的子集，也不是每个特征图都能用于下层的计算，FE-NET就是用来解决这个问题的。<br><img src="/2019/08/28/All-You-Need-is-a-Few-Shifts-Designing-Efficient-Convolutional-Neural-Networks-for-Image-Classification/FN.png" alt="FN"><br>I表示分离的特征图，O表示输出的特征图<br><img src="/2019/08/28/All-You-Need-is-a-Few-Shifts-Designing-Efficient-Convolutional-Neural-Networks-for-Image-Classification/FEBLOCK.png" alt="FEBLOCK"><br>把输入的特征图分成不同的子集，之后每一层对不同数量的子集进行卷积，第一层对第一个子集进行计算，并将计算结果作为下一层的输入，每次计算的数量是上次的两倍。<br><img src="/2019/08/28/All-You-Need-is-a-Few-Shifts-Designing-Efficient-Convolutional-Neural-Networks-for-Image-Classification/SLL.png" alt="SLL"><br>下图里面的网络作为FE-Block的computational unit，分别作用在不同的位置</p>
 <h2 id="Loss"><a href="#Loss" class="headerlink" title="Loss"></a>Loss</h2><p><img src="/2019/08/28/All-You-Need-is-a-Few-Shifts-Designing-Efficient-Convolutional-Neural-Networks-for-Image-Classification/LOSS.png" alt="LOSS"><br>分类损失和L1损失（约束偏移量）组成</p>
 <h1 id="Experiment"><a href="#Experiment" class="headerlink" title="Experiment"></a>Experiment</h1><p><img src="/2019/08/28/All-You-Need-is-a-Few-Shifts-Designing-Efficient-Convolutional-Neural-Networks-for-Image-Classification/SL.png" alt="SL"><br>左图是初始的偏移情况，右图是偏移量的结果，圆的面积表示偏移像素的数量<br><img src="/2019/08/28/All-You-Need-is-a-Few-Shifts-Designing-Efficient-Convolutional-Neural-Networks-for-Image-Classification/RES.png" alt="RES"><br>可以看出结果还是有了很大的提升，模型大小也相对较小，因为舍弃了不必要的偏移量</p>
